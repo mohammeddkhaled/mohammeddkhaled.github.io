@@ -1,0 +1,89 @@
+[
+  {
+    "category": "frontend",
+    "label": "Frontend",
+    "icon": "Monitor",
+    "skills": [
+      { "name": "HTML5", "icon": "SiHtml5", "level": "advanced" },
+      { "name": "CSS3", "icon": "SiCss3", "level": "advanced" },
+      { "name": "JavaScript", "icon": "SiJavascript", "level": "advanced" },
+      { "name": "React.js", "icon": "SiReact", "level": "advanced" },
+      { "name": "Next.js", "icon": "SiNextdotjs", "level": "intermediate" },
+      { "name": "Tailwind CSS", "icon": "SiTailwindcss", "level": "advanced" }
+    ]
+  },
+  {
+    "category": "backend",
+    "label": "Backend",
+    "icon": "Server",
+    "skills": [
+      { "name": "Node.js", "icon": "SiNodedotjs", "level": "advanced" },
+      { "name": "Express.js", "icon": "SiExpress", "level": "advanced" },
+      { "name": "RESTful APIs", "icon": "SiPostman", "level": "advanced" },
+      { "name": "JWT Auth", "icon": "SiJsonwebtokens", "level": "advanced" },
+      { "name": "Multer", "icon": "SiNodedotjs", "level": "intermediate" },
+      { "name": "Nodemailer", "icon": "SiMaildotru", "level": "intermediate" }
+    ]
+  },
+  {
+    "category": "database",
+    "label": "Database",
+    "icon": "Database",
+    "skills": [
+      { "name": "SQL", "icon": "SiMysql", "level": "advanced" },
+      { "name": "Sequelize ORM", "icon": "SiSequelize", "level": "advanced" },
+      { "name": "Database Design", "icon": "SiDiagramsdotnet", "level": "advanced" }
+    ]
+  },
+  {
+    "category": "languages",
+    "label": "Languages",
+    "icon": "Code",
+    "skills": [
+      { "name": "JavaScript", "icon": "SiJavascript", "level": "advanced" },
+      { "name": "SQL", "icon": "SiMysql", "level": "advanced" },
+      { "name": "HTML5", "icon": "SiHtml5", "level": "advanced" },
+      { "name": "CSS3", "icon": "SiCss3", "level": "advanced" }
+    ]
+  },
+  {
+    "category": "frameworks",
+    "label": "Frameworks",
+    "icon": "Layers",
+    "skills": [
+      { "name": "React.js", "icon": "SiReact", "level": "advanced" },
+      { "name": "Next.js", "icon": "SiNextdotjs", "level": "intermediate" },
+      { "name": "Express.js", "icon": "SiExpress", "level": "advanced" },
+      { "name": "Tailwind CSS", "icon": "SiTailwindcss", "level": "advanced" },
+      { "name": "Component Architecture", "icon": "SiReact", "level": "advanced" }
+    ]
+  },
+  {
+    "category": "tools",
+    "label": "Tools & Platforms",
+    "icon": "Wrench",
+    "skills": [
+      { "name": "Git", "icon": "SiGit", "level": "advanced" },
+      { "name": "GitHub", "icon": "SiGithub", "level": "advanced" },
+      { "name": "Postman", "icon": "SiPostman", "level": "advanced" },
+      { "name": "VS Code", "icon": "SiVisualstudiocode", "level": "advanced" },
+      { "name": "WordPress", "icon": "SiWordpress", "level": "intermediate" },
+      { "name": "XAMPP", "icon": "SiXampp", "level": "intermediate" },
+      { "name": "GitHub Copilot", "icon": "SiGithubcopilot", "level": "intermediate" },
+      { "name": "Google Colab", "icon": "SiGooglecolab", "level": "intermediate" }
+    ]
+  },
+  {
+    "category": "soft-skills",
+    "label": "Soft Skills",
+    "icon": "Heart",
+    "skills": [
+      { "name": "Leadership", "icon": "Crown", "level": "advanced" },
+      { "name": "Team Management", "icon": "Users", "level": "advanced" },
+      { "name": "Communication", "icon": "MessageCircle", "level": "advanced" },
+      { "name": "Problem Solving", "icon": "Lightbulb", "level": "advanced" },
+      { "name": "Adaptability", "icon": "RefreshCw", "level": "advanced" },
+      { "name": "Time Management", "icon": "Clock", "level": "advanced" }
+    ]
+  }
+]

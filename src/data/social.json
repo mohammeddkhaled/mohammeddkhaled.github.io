@@ -1,0 +1,56 @@
+[
+  {
+    "id": "linkedin",
+    "platform": "LinkedIn",
+    "url": "https://www.linkedin.com/in/mohammedkhaled30711182a8",
+    "icon": "SiLinkedin",
+    "label": "Connect on LinkedIn",
+    "action": "redirect",
+    "order": 1
+  },
+  {
+    "id": "github",
+    "platform": "GitHub",
+    "url": "https://github.com/mohammeddkhaled",
+    "icon": "SiGithub",
+    "label": "View GitHub Profile",
+    "action": "redirect",
+    "order": 2
+  },
+  {
+    "id": "email",
+    "platform": "Email",
+    "url": "mailto:mohdkhaled1031@gmail.com",
+    "icon": "Mail",
+    "label": "Send an Email",
+    "action": "mail",
+    "order": 3
+  },
+  {
+    "id": "instagram",
+    "platform": "Instagram",
+    "url": "https://instagram.com/",
+    "icon": "SiInstagram",
+    "label": "Follow on Instagram",
+    "action": "redirect",
+    "order": 4
+  },
+  {
+    "id": "whatsapp",
+    "platform": "WhatsApp",
+    "url": "https://wa.me/919502313716",
+    "icon": "SiWhatsapp",
+    "label": "Chat on WhatsApp",
+    "action": "chat",
+    "order": 5
+  },
+  {
+    "id": "portfolio",
+    "platform": "Portfolio",
+    "url": "#home",
+    "icon": "Globe",
+    "label": "Visit Portfolio",
+    "action": "redirect",
+    "order": 6
+  }
+]

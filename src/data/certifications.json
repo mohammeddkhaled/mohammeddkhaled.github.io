@@ -1,0 +1,32 @@
+[
+  {
+    "id": "fullstack-training",
+    "title": "Full-Stack Development Training",
+    "issuer": "SDHUB",
+    "date": "Aug 2025 – Nov 2025",
+    "credentialId": "",
+    "verifyUrl": "",
+    "logo": "",
+    "order": 1
+  },
+  {
+    "id": "google-data-foundations",
+    "title": "Data Analyst: Foundations — Data, Data, Everywhere",
+    "issuer": "Google (Coursera)",
+    "date": "Dec 2024",
+    "credentialId": "",
+    "verifyUrl": "https://coursera.org/share/598ee38f9bhda5f023342920f69d0ea726",
+    "logo": "",
+    "order": 2
+  },
+  {
+    "id": "google-data-decisions",
+    "title": "Data Analyst: Ask Questions to Make Data-Driven Decisions",
+    "issuer": "Google (Coursera)",
+    "date": "Dec 2024",
+    "credentialId": "",
+    "verifyUrl": "https://coursera.org/share/d6ba356d0137365e8999b4f03e43c0ba",
+    "logo": "",
+    "order": 3
+  }
+]
