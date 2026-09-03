@@ -42,6 +42,7 @@ const SOFT_SKILL_ICONS = {
 
 export default function SkillsSection() {
   const [activeCategory, setActiveCategory] = useState(skillsData[0].category);
+  const [selectedSkill, setSelectedSkill] = useState(null);
 
   const activeCategoryData =
     skillsData.find((cat) => cat.category === activeCategory) || skillsData[0];
@@ -49,17 +50,17 @@ export default function SkillsSection() {
   return (
     <section id="skills" className="py-section relative overflow-hidden bg-midnight-950">
       {/* Background Glow */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-gold-500/5 rounded-full blur-[140px] pointer-events-none" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gold-500/5 rounded-full blur-[180px] pointer-events-none" />
 
       <div className="section-container relative z-10">
         <SectionHeading
           number="04"
           title="Technical Mastery"
-          subtitle="Interactive orbital constellations grouping frontend, backend, databases, frameworks, and leadership proficiencies."
+          subtitle="Interactive tech galaxy visualization categorizing frontend, backend, databases, system architecture, and leadership proficiencies."
         />
 
         {/* Category Tab Selector Bar */}
-        <div className="flex items-center justify-center gap-2 flex-wrap mb-16">
+        <div className="flex items-center justify-center gap-2 flex-wrap mb-12">
           {skillsData.map((category) => {
             const Icon = CATEGORY_ICONS[category.icon] || Code;
             const isActive = activeCategory === category.category;
@@ -67,11 +68,14 @@ export default function SkillsSection() {
             return (
               <button
                 key={category.category}
-                onClick={() => setActiveCategory(category.category)}
-                className={`relative px-5 py-3 rounded-full font-heading text-xs md:text-sm font-medium transition-all duration-300 flex items-center gap-2 focus:outline-none ${
+                onClick={() => {
+                  setActiveCategory(category.category);
+                  setSelectedSkill(null);
+                }}
+                className={`relative px-5 py-3 rounded-full font-heading text-xs sm:text-sm font-semibold transition-all duration-300 flex items-center gap-2.5 focus:outline-none ${
                   isActive
                     ? 'text-midnight-950 shadow-gold'
-                    : 'text-pearl-300 bg-midnight-900/80 border border-midnight-700/60 hover:text-gold-300 hover:border-gold-500/30'
+                    : 'text-pearl-300 bg-midnight-900/90 border border-midnight-700/60 hover:text-pearl-100 hover:border-gold-500/40'
                 }`}
               >
                 {isActive && (
@@ -88,50 +92,69 @@ export default function SkillsSection() {
           })}
         </div>
 
-        {/* Orbital Constellation View */}
+        {/* Galaxy Constellation View */}
         <AnimatePresence mode="wait">
           <motion.div
             key={activeCategory}
-            initial={{ opacity: 0, scale: 0.95 }}
-            animate={{ opacity: 1, scale: 1 }}
-            exit={{ opacity: 0, scale: 0.95 }}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.4 }}
-            className="relative max-w-4xl mx-auto min-h-[380px] rounded-3xl bg-midnight-900/60 border border-midnight-700/60 backdrop-blur-xl p-8 md:p-12 flex flex-col items-center justify-center overflow-hidden shadow-2xl"
+            className="relative max-w-5xl mx-auto rounded-3xl bg-midnight-900/80 border border-midnight-700/60 backdrop-blur-2xl p-8 sm:p-12 overflow-hidden shadow-2xl"
           >
-            {/* Center Orbital Core */}
-            <div className="relative z-20 w-28 h-28 rounded-full bg-midnight-950 border border-gold-500/50 flex flex-col items-center justify-center shadow-gold animate-pulse-gold mb-8">
-              <Sparkles className="w-6 h-6 text-gold-400 mb-1" />
-              <span className="font-heading text-xs font-bold text-pearl-100 text-center uppercase tracking-wider">
-                {activeCategoryData.label}
+            {/* Category Header Bar */}
+            <div className="flex flex-wrap items-center justify-between gap-4 mb-8 pb-6 border-b border-midnight-800">
+              <div className="flex items-center gap-3">
+                <span className="font-mono text-xs text-gold-400 font-bold uppercase tracking-widest px-3 py-1 rounded-full bg-gold-500/10 border border-gold-500/20">
+                  {activeCategoryData.label} Constellation
+                </span>
+                <span className="font-mono text-xs text-pearl-400">
+                  {activeCategoryData.skills.length} Technical Nodes
+                </span>
+              </div>
+              <span className="font-mono text-xs text-pearl-400">
+                Hover or click any node to inspect proficiency
               </span>
             </div>
 
-            {/* Orbiting Skills Cluster */}
-            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 md:gap-6 w-full relative z-20">
+            {/* Orbiting Skills Grid Nodes */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 relative z-20">
               {activeCategoryData.skills.map((skill, idx) => {
                 const IconComponent =
                   SiIcons[skill.icon] || SOFT_SKILL_ICONS[skill.icon] || Code;
+                const isSelected = selectedSkill?.name === skill.name;
 
                 return (
                   <motion.div
                     key={skill.name}
-                    initial={{ opacity: 0, y: 20 }}
+                    initial={{ opacity: 0, y: 15 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: idx * 0.05 }}
-                    whileHover={{ scale: 1.05, y: -4 }}
-                    className="p-4 rounded-2xl bg-midnight-800/80 border border-midnight-700/60 hover:border-gold-500/40 hover:bg-midnight-700/80 transition-all duration-300 flex items-center gap-3 group cursor-default shadow-md"
+                    transition={{ delay: idx * 0.04 }}
+                    onClick={() => setSelectedSkill(skill)}
+                    whileHover={{ scale: 1.02 }}
+                    className={`p-5 rounded-2xl border transition-all duration-300 cursor-pointer flex items-center justify-between ${
+                      isSelected
+                        ? 'bg-midnight-800 border-gold-400 shadow-glow'
+                        : 'bg-midnight-950/80 border-midnight-800 hover:border-gold-500/40 hover:bg-midnight-800/60'
+                    }`}
                   >
-                    <div className="w-10 h-10 rounded-xl bg-midnight-950 border border-gold-500/20 flex items-center justify-center text-gold-400 group-hover:text-gold-300 group-hover:border-gold-400 group-hover:shadow-glow transition-all">
-                      <IconComponent className="w-5 h-5" />
+                    <div className="flex items-center gap-3.5">
+                      <div className="w-11 h-11 rounded-xl bg-midnight-900 border border-gold-500/30 flex items-center justify-center text-gold-400 shadow-sm">
+                        <IconComponent className="w-5.5 h-5.5" />
+                      </div>
+                      <div className="flex flex-col">
+                        <span className="font-heading text-sm font-bold text-pearl-100">
+                          {skill.name}
+                        </span>
+                        <span className="font-mono text-[11px] text-pearl-400">
+                          {skill.level}
+                        </span>
+                      </div>
                     </div>
-                    <div className="flex flex-col">
-                      <span className="font-heading text-sm font-semibold text-pearl-100 group-hover:text-gold-300 transition-colors">
-                        {skill.name}
-                      </span>
-                      <span className="font-mono text-[10px] text-pearl-400 uppercase tracking-widest">
-                        {skill.level}
-                      </span>
-                    </div>
+
+                    <span className="font-mono text-[10px] px-2.5 py-1 rounded-full bg-gold-500/10 text-gold-400 border border-gold-500/20 font-semibold uppercase">
+                      Active
+                    </span>
                   </motion.div>
                 );
               })}

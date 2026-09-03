@@ -1,5 +1,5 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React, { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import {
   GraduationCap,
   BookOpen,
@@ -8,13 +8,13 @@ import {
   Rocket,
   Users,
   Target,
-  CheckCircle2,
+  ChevronRight,
+  ChevronLeft,
   Sparkles,
 } from 'lucide-react';
 import SectionHeading from '@/components/common/SectionHeading.jsx';
 import GlowCard from '@/components/common/GlowCard.jsx';
 import journeyData from '@/data/journey.json';
-import { fadeInUp, staggerContainer } from '@/animations/variants.js';
 
 const ICON_MAP = {
   GraduationCap,
@@ -27,103 +27,148 @@ const ICON_MAP = {
 };
 
 export default function JourneySection() {
+  const [activeIndex, setActiveIndex] = useState(5); // Default to current Team Lead milestone
+
+  const activeItem = journeyData[activeIndex] || journeyData[0];
+  const IconComponent = ICON_MAP[activeItem.icon] || Code;
+
   return (
-    <section id="journey" className="py-section relative overflow-hidden bg-midnight-900/60">
-      {/* Background Lighting */}
-      <div className="absolute top-1/3 left-10 w-80 h-80 bg-gold-500/5 rounded-full blur-[120px] pointer-events-none" />
+    <section id="journey" className="py-section relative overflow-hidden bg-midnight-950">
+      {/* Background Ambient Glow */}
+      <div className="absolute top-1/3 left-1/4 w-[500px] h-[500px] bg-gold-500/5 rounded-full blur-[160px] pointer-events-none" />
 
       <div className="section-container relative z-10">
         <SectionHeading
           number="03"
           title="The Evolution"
-          subtitle="My complete journey from school to leading software engineering teams and shaping enterprise solutions."
+          subtitle="An interactive life path traveling from secondary education to full stack team lead & engineering mastery."
         />
 
-        <div className="relative max-w-4xl mx-auto mt-12">
-          {/* Vertical Connecting Guide Line */}
-          <div className="absolute left-6 md:left-1/2 top-4 bottom-4 w-[2px] bg-gradient-to-b from-gold-500 via-amber-500/50 to-midnight-700 -translate-x-1/2 hidden sm:block" />
+        {/* Milestone Horizontal Stepper Dock */}
+        <div className="my-10 overflow-x-auto pb-4 scrollbar-none">
+          <div className="flex items-center justify-between min-w-[700px] relative px-6">
+            {/* Horizontal Line behind nodes */}
+            <div className="absolute left-8 right-8 top-1/2 -translate-y-1/2 h-[2px] bg-midnight-800 z-0">
+              <motion.div
+                className="h-full bg-gradient-to-r from-gold-400 to-amber-500 rounded-full"
+                animate={{
+                  width: `${(activeIndex / (journeyData.length - 1)) * 100}%`,
+                }}
+                transition={{ type: 'spring', stiffness: 300, damping: 30 }}
+              />
+            </div>
 
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, margin: '-50px' }}
-            variants={staggerContainer}
-            className="flex flex-col gap-12 sm:gap-16"
-          >
             {journeyData.map((item, idx) => {
-              const IconComponent = ICON_MAP[item.icon] || Code;
-              const isEven = idx % 2 === 0;
-              const isCurrent = item.milestone === 'current';
-              const isFuture = item.milestone === 'future';
+              const ItemIcon = ICON_MAP[item.icon] || Code;
+              const isActive = activeIndex === idx;
+              const isPast = idx < activeIndex;
 
               return (
-                <motion.div
+                <button
                   key={item.id}
-                  variants={fadeInUp}
-                  className={`relative flex flex-col sm:flex-row items-start ${
-                    isEven ? 'sm:flex-row-reverse' : ''
-                  }`}
+                  onClick={() => setActiveIndex(idx)}
+                  className={`relative z-10 flex flex-col items-center group focus:outline-none`}
                 >
-                  {/* Center Timeline Node */}
-                  <div className="absolute left-6 sm:left-1/2 -translate-x-1/2 top-0 z-20 flex items-center justify-center">
-                    <div
-                      className={`w-12 h-12 rounded-full flex items-center justify-center border transition-all duration-300 ${
-                        isCurrent
-                          ? 'bg-gold-500 border-gold-300 text-midnight-950 shadow-gold scale-110 animate-pulse-gold'
-                          : isFuture
-                          ? 'bg-midnight-900 border-dashed border-gold-500/50 text-gold-400'
-                          : 'bg-midnight-800 border-gold-500/40 text-gold-400'
-                      }`}
-                    >
-                      <IconComponent className="w-5 h-5" />
+                  <div
+                    className={`w-12 h-12 rounded-full flex items-center justify-center border transition-all duration-300 ${
+                      isActive
+                        ? 'bg-gold-500 border-gold-300 text-midnight-950 shadow-gold scale-125'
+                        : isPast
+                        ? 'bg-midnight-900 border-gold-500/50 text-gold-400'
+                        : 'bg-midnight-950 border-midnight-700 text-pearl-400 hover:border-gold-500/40 hover:text-gold-300'
+                    }`}
+                  >
+                    <ItemIcon className="w-5 h-5" />
+                  </div>
+                  <span
+                    className={`font-mono text-[11px] mt-3 font-semibold transition-colors ${
+                      isActive
+                        ? 'text-gold-400 font-bold'
+                        : 'text-pearl-400 group-hover:text-pearl-200'
+                    }`}
+                  >
+                    0{idx + 1}
+                  </span>
+                </button>
+              );
+            })}
+          </div>
+        </div>
+
+        {/* ACTIVE MILESTONE FEATURE SCENE */}
+        <div className="max-w-4xl mx-auto mt-8">
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={activeItem.id}
+              initial={{ opacity: 0, y: 25, scale: 0.96 }}
+              animate={{ opacity: 1, y: 0, scale: 1 }}
+              exit={{ opacity: 0, y: -25, scale: 0.96 }}
+              transition={{ duration: 0.45, ease: 'easeOut' }}
+            >
+              <GlowCard className="p-8 sm:p-12 border-gold-500/40 relative overflow-hidden">
+                <div className="flex flex-wrap items-center justify-between gap-4 mb-6 pb-6 border-b border-midnight-800">
+                  <div className="flex items-center gap-4">
+                    <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-gold-400 to-amber-500 text-midnight-950 flex items-center justify-center shadow-gold">
+                      <IconComponent className="w-7 h-7" />
+                    </div>
+                    <div>
+                      <span className="font-mono text-xs text-gold-400 font-semibold uppercase tracking-widest block">
+                        Milestone 0{activeIndex + 1} of 0{journeyData.length}
+                      </span>
+                      <h3 className="text-2xl sm:text-3xl font-heading font-extrabold text-pearl-100">
+                        {activeItem.title}
+                      </h3>
                     </div>
                   </div>
 
-                  {/* Card Content */}
-                  <div
-                    className={`w-full sm:w-[calc(50%-2.5rem)] pl-16 sm:pl-0 ${
-                      isEven ? 'sm:text-right sm:pr-8' : 'sm:text-left sm:pl-8'
-                    }`}
-                  >
-                    <GlowCard
-                      className={`p-6 sm:p-8 ${
-                        isCurrent
-                          ? 'border-gold-500/60 shadow-glow bg-midnight-900/90'
-                          : ''
-                      }`}
-                    >
-                      <div
-                        className={`flex items-center gap-3 mb-2 ${
-                          isEven ? 'sm:justify-end' : 'sm:justify-start'
-                        }`}
-                      >
-                        <span className="font-mono text-xs font-semibold px-3 py-1 rounded-full bg-gold-500/10 text-gold-400 border border-gold-500/20">
-                          {item.year}
-                        </span>
-                        {isCurrent && (
-                          <span className="font-mono text-[10px] uppercase font-bold tracking-wider px-2.5 py-0.5 rounded-full bg-success/20 text-success border border-success/30">
-                            Current Role
-                          </span>
-                        )}
-                      </div>
-
-                      <h3 className="text-xl font-heading font-bold text-pearl-100 mb-1">
-                        {item.title}
-                      </h3>
-
-                      <h4 className="text-sm font-heading font-medium text-gold-400 mb-3">
-                        {item.subtitle}
-                      </h4>
-
-                      <p className="text-sm text-pearl-300 font-body leading-relaxed">
-                        {item.description}
-                      </p>
-                    </GlowCard>
+                  <div className="flex items-center gap-3">
+                    <span className="font-mono text-xs px-4 py-1.5 rounded-full bg-gold-500/10 text-gold-300 border border-gold-500/30">
+                      {activeItem.year}
+                    </span>
+                    {activeItem.milestone === 'current' && (
+                      <span className="font-mono text-xs px-3 py-1 rounded-full bg-success/20 text-success border border-success/30 flex items-center gap-1.5">
+                        <Sparkles className="w-3.5 h-3.5" />
+                        Current Focus
+                      </span>
+                    )}
                   </div>
-                </motion.div>
-              );
-            })}
-          </motion.div>
+                </div>
+
+                <h4 className="text-lg font-heading font-medium text-gold-300 mb-4">
+                  {activeItem.subtitle}
+                </h4>
+
+                <p className="text-base sm:text-lg text-pearl-200 font-body leading-relaxed mb-8">
+                  {activeItem.description}
+                </p>
+
+                {/* Milestone Navigation Controls */}
+                <div className="flex items-center justify-between pt-6 border-t border-midnight-800">
+                  <button
+                    disabled={activeIndex === 0}
+                    onClick={() => setActiveIndex((prev) => Math.max(0, prev - 1))}
+                    className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-midnight-900 border border-midnight-700 text-xs font-heading text-pearl-300 hover:text-gold-300 disabled:opacity-30 disabled:pointer-events-none transition-all"
+                  >
+                    <ChevronLeft className="w-4 h-4" />
+                    <span>Previous Phase</span>
+                  </button>
+
+                  <span className="font-mono text-xs text-pearl-400">
+                    Phase {activeIndex + 1} / {journeyData.length}
+                  </span>
+
+                  <button
+                    disabled={activeIndex === journeyData.length - 1}
+                    onClick={() => setActiveIndex((prev) => Math.min(journeyData.length - 1, prev + 1))}
+                    className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-midnight-900 border border-midnight-700 text-xs font-heading text-pearl-300 hover:text-gold-300 disabled:opacity-30 disabled:pointer-events-none transition-all"
+                  >
+                    <span>Next Phase</span>
+                    <ChevronRight className="w-4 h-4" />
+                  </button>
+                </div>
+              </GlowCard>
+            </motion.div>
+          </AnimatePresence>
         </div>
       </div>
     </section>
