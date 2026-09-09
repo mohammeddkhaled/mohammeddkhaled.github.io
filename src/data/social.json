@@ -43,14 +43,6 @@
     "label": "Chat on WhatsApp",
     "action": "chat",
     "order": 5
-  },
-  {
-    "id": "portfolio",
-    "platform": "Portfolio",
-    "url": "#home",
-    "icon": "Globe",
-    "label": "Visit Portfolio",
-    "action": "redirect",
-    "order": 6
   }
+
 ]

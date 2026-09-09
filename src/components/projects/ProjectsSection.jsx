@@ -45,7 +45,7 @@ export default function ProjectsSection() {
             <span className="relative z-10">Enterprise Solutions ({companyProjects.length})</span>
           </button>
 
-          <button
+          {/* <button
             onClick={() => setActiveTab('personal')}
             className={`relative px-6 py-3 rounded-full font-heading text-xs md:text-sm font-semibold transition-all duration-300 flex items-center gap-2.5 focus:outline-none ${
               activeTab === 'personal'
@@ -62,7 +62,7 @@ export default function ProjectsSection() {
             )}
             <FolderGit2 className="w-4 h-4 relative z-10" />
             <span className="relative z-10">Personal Experiments ({personalProjects.length})</span>
-          </button>
+          </button> */}
         </div>
 
         {/* Content Render */}

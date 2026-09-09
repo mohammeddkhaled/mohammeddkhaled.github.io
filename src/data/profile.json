@@ -18,10 +18,10 @@
   "resumeUrl": "/khaled-resume-Sep2026.pdf",
   "avatarUrl": "/avatar.webp",
   "stats": [
-    { "label": "Years Experience", "value": "1+", "suffix": "" },
-    { "label": "Projects Delivered", "value": "10", "suffix": "+" },
-    { "label": "Technologies", "value": "25", "suffix": "+" },
-    { "label": "Team Members Led", "value": "5", "suffix": "+" }
+    { "label": "Years Experience", "value": "1", "suffix": "" },
+    { "label": "Projects Delivered", "value": "10+", "suffix": "+" },
+    { "label": "Technologies", "value": "10+", "suffix": "+" },
+    { "label": "Team Members Led", "value": "3", "suffix": "+" }
   ],
   "languages": ["English", "Hindi", "Urdu", "Telugu"]
 }

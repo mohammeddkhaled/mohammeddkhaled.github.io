@@ -29,10 +29,10 @@ export default function HomePage() {
       <div className="relative overflow-hidden bg-midnight-950">
         <HeroSection />
         <AboutSection />
+        <ExperienceSection />
         <JourneySection />
         <SkillsSection />
         <ProjectsSection />
-        <ExperienceSection />
         <EducationSection />
         <CertificationsSection />
         <ContactSection />
