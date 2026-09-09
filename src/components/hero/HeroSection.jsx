@@ -159,14 +159,14 @@ export default function HeroSection() {
           </motion.h1>
 
           {/* 3. Description (Max Width 580px) */}
-          <motion.p
+          {/* <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.3 }}
             className="text-sm sm:text-base text-pearl-300 font-body max-w-[580px] leading-relaxed mb-6 sm:mb-8 text-center"
           >
             I am <strong className="text-pearl-100 font-medium">{profileData.name}</strong>. Leading full stack architecture at Luminate Web Solutions. Specializing in high-performance REST APIs, database systems, and microservice engineering.
-          </motion.p>
+          </motion.p> */}
 
           {/* 4. Buttons Row */}
           <motion.div
