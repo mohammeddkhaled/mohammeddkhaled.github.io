@@ -1,16 +1,22 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, Download, ArrowRight } from 'lucide-react';
+import { useNavigate, useLocation } from 'react-router-dom';
 import { NAV_ITEMS } from '@/constants/index.js';
 import useActiveSection from '@/hooks/useActiveSection.js';
 import { scrollToSection } from '@/utils/helpers.js';
 import profileData from '@/data/profile.json';
+
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const sectionIds = ['home', ...NAV_ITEMS.map((item) => item.id)];
   const activeSection = useActiveSection(sectionIds);
+
+  const navigate = useNavigate();
+  const location = useLocation();
+  const isHome = location.pathname === '/';
 
   useEffect(() => {
     const handleScroll = () => {
@@ -20,6 +26,21 @@ export default function Navbar() {
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  const handleNavClick = (id) => {
+    setMobileMenuOpen(false);
+    if (id === 'projects') {
+      navigate('/projects');
+      window.scrollTo(0, 0);
+    } else {
+      if (!isHome) {
+        navigate('/');
+        setTimeout(() => scrollToSection(id), 100);
+      } else {
+        scrollToSection(id);
+      }
+    }
+  };
 
   return (
     <header
@@ -34,7 +55,7 @@ export default function Navbar() {
           href="#home"
           onClick={(e) => {
             e.preventDefault();
-            scrollToSection('home');
+            handleNavClick('home');
           }}
           className="flex items-center gap-3.5 group focus:outline-none shrink-0"
         >
@@ -60,7 +81,7 @@ export default function Navbar() {
             return (
               <button
                 key={item.id}
-                onClick={() => scrollToSection(item.id)}
+                onClick={() => handleNavClick(item.id)}
                 className={`relative px-4 py-2 text-xs sm:text-sm font-heading font-medium rounded-full transition-all duration-300 focus:outline-none whitespace-nowrap ${isActive ? 'text-midnight-950 font-bold' : 'text-pearl-300 hover:text-pearl-100'
                   }`}
               >
@@ -119,10 +140,7 @@ export default function Navbar() {
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: idx * 0.04 }}
-                  onClick={() => {
-                    setMobileMenuOpen(false);
-                    scrollToSection(item.id);
-                  }}
+                  onClick={() => handleNavClick(item.id)}
                   className="flex items-center justify-between text-left font-heading text-base  font-semibold text-pearl-100 hover:text-gold-400 py-3 border-b border-midnight-800/80 group"
                 >
                   <span>{item.label}</span>
