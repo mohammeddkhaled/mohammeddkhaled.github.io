@@ -5,7 +5,7 @@
     "title": "ERP System Development",
     "shortDescription": "End-to-end internal ERP system with complete technical lifecycle ownership — from architecture to deployment.",
     "fullDescription": "Leading the end-to-end development of an internal ERP system, owning the complete technical lifecycle from requirement analysis to implementation. Designed the overall system architecture, backend structure (MVC), and core business logic.",
-    "technologies": ["Node.js", "Express.js", "SQL", "Sequelize ORM", "JWT", "React.js", "REST APIs"],
+    "technologies": ["Node.js", "Express.js", "SQL", "Sequelize ORM", "JWT", "React.js", "REST APIs","Multer","Bcrypt"],
     "screenshots": [],
     "liveUrl": "https://himqubator.com",
     "githubUrl": "",
@@ -42,7 +42,7 @@
     "title": "Institute Management System",
     "shortDescription": "Comprehensive institute management platform with RBAC supporting Student, Trainer, Admin, and Director roles.",
     "fullDescription": "Developed a comprehensive institute management platform with a secure Role-Based Access Control (RBAC) system supporting Student, Trainer, Admin, and Director roles. End-to-end student lifecycle management with registration, approvals, assessments, and progress tracking.",
-    "technologies": ["Node.js", "Express.js", "SQL", "Sequelize", "JWT", "React.js", "REST APIs", "Multer"],
+    "technologies": ["Node.js", "Express.js", "SQL", "Sequelize", "JWT", "React.js", "REST APIs", "Multer","Bcrypt"],
     "screenshots": [],
     "liveUrl": "https://sdhubqutubshahi.com",
     "githubUrl": "",
@@ -73,48 +73,6 @@
     "company": "Luminate Web Solutions",
     "isFeatured": true,
     "order": 2
-  },
-  {
-    "id": "business-websites",
-    "category": "company",
-    "title": "Business Websites & Admin Panels",
-    "shortDescription": "Multiple business, educational, and corporate websites with custom admin panels for content management.",
-    "fullDescription": "Developed and maintained multiple business, educational, and corporate websites with custom admin panels, enabling non-technical users to manage website content efficiently. Implemented responsive and SEO-friendly user interfaces.",
-    "technologies": ["React.js", "Node.js", "Express.js", "SQL", "REST APIs", "Tailwind CSS", "JWT"],
-    "screenshots": [],
-    "liveUrl": "https://luminatewebsol.com",
-    "githubUrl": "",
-    "features": [
-      "Custom admin panels for non-technical content management",
-      "Scalable RESTful APIs with authentication",
-      "Database-driven workflows for frontend-backend communication",
-      "Responsive and SEO-friendly interfaces",
-      "Cross-device compatibility",
-      "Performance-optimized delivery"
-    ],
-    "challenges": [
-      "Building reusable admin panel components across diverse business domains",
-      "Ensuring SEO performance while maintaining dynamic content",
-      "Cross-device testing and optimization"
-    ],
-    "responsibilities": [
-      "Frontend development",
-      "Backend API development",
-      "Admin panel architecture",
-      "SEO optimization",
-      "Deployment & maintenance"
-    ],
-    "relatedSites": [
-      { "name": "Luminate Web Solutions", "url": "https://luminatewebsol.com" },
-      { "name": "Zikra High School", "url": "https://zikrahighschool.com" },
-      { "name": "Lucky's Home", "url": "https://luckys-home.com" },
-      { "name": "Islamic Notes", "url": "https://islamicnotes.info" },
-      { "name": "JAS International", "url": "https://jasinternational.co.in" }
-    ],
-    "timeline": "2025 – Present",
-    "status": "in-progress",
-    "company": "Luminate Web Solutions",
-    "isFeatured": true,
-    "order": 3
   }
+ 
 ]

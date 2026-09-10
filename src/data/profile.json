@@ -7,7 +7,6 @@
   "tagline": "Building scalable web solutions from architecture to deployment",
   "shortBio": "I design and build robust, scalable web applications — from database architecture to polished user interfaces. Currently leading backend-focused development at Luminate Web Solutions.",
   "fullBio": [
-    "I'm Mohammed Khaled, a Full Stack Developer based in Hyderabad, India, with a strong focus on backend architecture and scalable systems.",
     "With hands-on experience in building enterprise-grade applications — from ERP systems to institute management platforms — I bring a deep understanding of system design, RESTful APIs, and database architecture.",
     "I lead cross-functional teams, drive technical decisions, and mentor aspiring developers. My approach combines clean code, scalable architecture, and user-centric design to deliver impactful solutions.",
     "Currently at Luminate Web Solutions, I oversee the complete technical lifecycle of multiple projects simultaneously, from requirement analysis through deployment and maintenance."
@@ -16,7 +15,7 @@
   "email": "mohdkhaled1031@gmail.com",
   "phone": "+91 9502313716",
   "resumeUrl": "/khaled-resume-Sep2026.pdf",
-  "avatarUrl": "/avatar.webp",
+  "avatarUrl": "/profile.jpg",
   "stats": [
     { "label": "Years Experience", "value": "1", "suffix": "" },
     { "label": "Projects Delivered", "value": "10", "suffix": "+" },

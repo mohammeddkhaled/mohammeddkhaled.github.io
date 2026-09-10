@@ -33,8 +33,8 @@ export default function CompanyProjects({ projects }) {
                 </div>
               </div>
 
-              <div className="flex items-center gap-3">
-                <span className="font-mono text-xs px-4 py-1.5 rounded-full bg-midnight-950 text-pearl-300 border border-midnight-700 font-semibold">
+              <div className="flex items-center gap-3 text-black">
+                <span className="font-mono text-xs  px-4 py-1.5 rounded-full bg-midnight-950 text-pearl-300 border border-midnight-700 font-semibold">
                   {project.timeline}
                 </span>
                 {project.liveUrl && (
