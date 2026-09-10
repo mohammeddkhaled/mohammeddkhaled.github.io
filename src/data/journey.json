@@ -1,70 +1,50 @@
 [
   {
-    "id": "tenth-standard",
-    "year": "2019",
-    "title": "10th Standard",
-    "subtitle": "Secondary School Certificate",
-    "description": "Completed secondary education, building a strong academic foundation in mathematics, sciences, and computer fundamentals.",
-    "icon": "GraduationCap",
-    "milestone": "completed",
-    "order": 1
-  },
-  {
-    "id": "intermediate",
-    "year": "2021",
-    "title": "Intermediate",
-    "subtitle": "Higher Secondary Education",
-    "description": "Pursued higher secondary education with a focus on mathematics and sciences, developing analytical thinking and problem-solving skills.",
-    "icon": "BookOpen",
-    "milestone": "completed",
-    "order": 2
-  },
-  {
     "id": "bachelors-degree",
     "year": "2021 – 2025",
     "title": "Bachelor's Degree",
     "subtitle": "B.E. Computer Science Engineering — Osmania University",
-    "description": "Earned a Bachelor of Engineering in Computer Science from Osmania University, Hyderabad. Gained deep expertise in data structures, algorithms, databases, web development, and software engineering principles.",
+    "description": "Earned a Bachelor of Engineering in Computer Science from Osmania University, Hyderabad. ",
     "icon": "Award",
     "milestone": "completed",
-    "order": 3
+    "order": 1
   },
   {
     "id": "fullstack-training",
-    "year": "Aug – Nov 2025",
+    "year": "Sep – Dec 2025",
     "title": "Full-Stack Training",
     "subtitle": "SDHUB — Intensive Development Program",
     "description": "Completed intensive full-stack development training covering frontend frameworks, backend architecture, database design, and deployment workflows. Built multiple real-world projects.",
     "icon": "Code",
     "milestone": "completed",
-    "order": 4
+    "order": 2
   },
   {
     "id": "professional-career",
     "year": "Nov 2025",
     "title": "Professional Career Begins",
-    "subtitle": "Luminate Web Solutions — Junior Full Stack Developer",
-    "description": "Joined Luminate Web Solutions as a Junior Full Stack Developer with a backend focus. Immediately began contributing to enterprise projects and was quickly elevated to Team Lead responsibilities.",
+    "subtitle": "Luminate Web Solutions — Full Stack Developer Intern",
+    "description": "Joined Luminate Web Solutions as a  Full Stack Developer with a backend focus. Immediately began contributing to enterprise projects and was quickly elevated to Team Lead responsibilities.",
     "icon": "Rocket",
     "milestone": "completed",
-    "order": 5
+    "order": 3
   },
   {
     "id": "team-lead",
     "year": "2026",
-    "title": "Team Lead",
+    "title": "Junior Full Stack Developer | Team Lead",
     "subtitle": "Leading Cross-Functional Development Teams",
-    "description": "Promoted to lead cross-functional development teams. Now driving technical decisions, managing project roadmaps, conducting code reviews, and mentoring interns across multiple simultaneous projects.",
+    "description": "Promoted to Junior Full Stack Developer and lead cross-functional development teams. Now driving technical decisions, managing project roadmaps, conducting code reviews, and mentoring interns across multiple simultaneous projects.",
     "icon": "Users",
     "milestone": "current",
-    "order": 6
+    "order": 4
   },
   {
     "id": "future-goals",
     "year": "Beyond",
     "title": "Future Goals",
     "subtitle": "Senior Developer → Architect → Tech Lead",
-    "description": "Pursuing mastery in system design, cloud architecture, and DevOps. Goals include building SaaS products, contributing to open source, and growing into a senior technical leadership role.",
+    "description": "mastery in system design, cloud architecture, and DevOps. Goals include building SaaS products, contributing to open source, and growing into a senior technical leadership role.",
     "icon": "Target",
     "milestone": "future",
     "order": 7

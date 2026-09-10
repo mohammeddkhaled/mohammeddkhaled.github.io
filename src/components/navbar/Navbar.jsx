@@ -48,7 +48,7 @@ export default function Navbar() {
               {profileData.name}
             </span>
             <span className="font-mono text-[8px] text-pearl-400 uppercase tracking-widest">
-              Full Stack developer | Software Engineer
+              Full Stack developer | Software Developer
             </span>
           </div>
         </a>

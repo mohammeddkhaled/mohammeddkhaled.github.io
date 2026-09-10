@@ -52,7 +52,7 @@ export default function CertificationsSection() {
                 </div>
 
                 {cert.verifyUrl ? (
-                  <div className="pt-6 border-t border-midnight-800">
+                  <div className="pt-6 border-t border-midnight-800 text-black">
                     <Button
                       variant="primary"
                       size="sm"
@@ -60,7 +60,7 @@ export default function CertificationsSection() {
                       target="_blank"
                       rel="noopener noreferrer"
                       icon={ExternalLink}
-                      className="w-full shadow-gold"
+                      className="w-full shadow-gold "
                     >
                       Verify Credential
                     </Button>

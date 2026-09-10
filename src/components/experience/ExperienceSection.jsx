@@ -130,12 +130,12 @@ export default function ExperienceSection() {
                       <span className="font-mono text-xs text-gold-400 font-bold uppercase tracking-widest block mb-1">
                         {activeExp.company}
                       </span>
-                      <h3 className="text-2xl sm:text-3xl font-heading font-extrabold text-pearl-100">
+                      <h3 className="text-xl  font-heading font-extrabold text-pearl-100">
                         {activeExp.role}
                       </h3>
                     </div>
 
-                    <div className="flex flex-col items-end gap-1.5">
+                    <div className="flex align-center justify-center gap-1.5">
                       <span className="font-mono text-xs px-3.5 py-1.5 rounded-full bg-gold-500/10 text-gold-400 border border-gold-500/20 flex items-center gap-1.5 font-semibold">
                         <Calendar className="w-3.5 h-3.5" />
                         {activeExp.period}
@@ -162,22 +162,6 @@ export default function ExperienceSection() {
                       </li>
                     ))}
                   </ul>
-
-                  <div>
-                    <span className="font-mono text-xs text-pearl-400 font-bold uppercase tracking-wider block mb-3">
-                      Technologies & Frameworks
-                    </span>
-                    <div className="flex flex-wrap gap-2">
-                      {activeExp.technologies.map((tech) => (
-                        <span
-                          key={tech}
-                          className="font-mono text-xs font-semibold px-3 py-1 rounded-lg bg-midnight-950 border border-midnight-700 text-gold-300"
-                        >
-                          {tech}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
                 </GlowCard>
               </motion.div>
             </AnimatePresence>

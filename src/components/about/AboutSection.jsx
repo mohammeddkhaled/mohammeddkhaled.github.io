@@ -43,7 +43,7 @@ export default function AboutSection() {
         <SectionHeading
           number="02"
           title="Engineered For Impact"
-          subtitle="A creative director's view into my technical background, philosophy, and approach to full stack engineering."
+          subtitle="A creative director's view into my technical background and approach to full stack engineering."
         />
 
         {/* EDITORIAL HERO QUOTE */}

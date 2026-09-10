@@ -19,9 +19,9 @@
   "avatarUrl": "/avatar.webp",
   "stats": [
     { "label": "Years Experience", "value": "1", "suffix": "" },
-    { "label": "Projects Delivered", "value": "10+", "suffix": "+" },
-    { "label": "Technologies", "value": "10+", "suffix": "+" },
+    { "label": "Projects Delivered", "value": "10", "suffix": "+" },
+    { "label": "Technologies", "value": "10", "suffix": "+" },
     { "label": "Team Members Led", "value": "3", "suffix": "+" }
   ],
-  "languages": ["English", "Hindi", "Urdu", "Telugu"]
+  "languages": ["English", "Hindi", "Telugu"]
 }

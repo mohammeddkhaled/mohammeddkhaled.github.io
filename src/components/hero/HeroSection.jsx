@@ -104,12 +104,12 @@ export default function HeroSection() {
       {/* Background Name Watermark */}
       <div
         ref={watermarkRef}
-        className="absolute inset-0 flex items-center justify-center pointer-events-none select-none z-0 overflow-hidden opacity-[0.035] px-4"
+        className="absolute inset-0 flex items-center justify-center pointer-events-none select-none z-0 overflow-hidden opacity-[0.10] px-4"
       >
         <span
-          className="font-heading text-[11vw] font-black uppercase tracking-widest text-transparent text-center whitespace-nowrap"
+          className="font-heading text-[8vw] font-black uppercase tracking-widest  text-center whitespace-nowrap"
           style={{
-            WebkitTextStroke: '2px rgba(212, 168, 83, 0.8)',
+            WebkitTextStroke: '2px rgba(243, 164, 8, 0.8)',
             transform: `translate3d(${mousePos.x * -25}px, ${mousePos.y * -35}px, 0)`,
             transition: 'transform 0.4s cubic-bezier(0.25, 1, 0.5, 1)',
           }}
@@ -133,13 +133,13 @@ export default function HeroSection() {
               <span className="relative inline-flex rounded-full h-2 w-2 bg-success" />
             </span>
             <span className="font-mono text-xs font-semibold text-pearl-200 uppercase tracking-wider">
-              Full Stack Developer | Software Engineer | Team Lead
+              Full Stack Developer | Software Developer
             </span>
             <div className="w-[1px] h-3 bg-gold-500/30" />
-            <span className="font-mono text-xs text-gold-400 font-medium flex items-center gap-1">
+            {/* <span className="font-mono text-xs text-gold-400 font-medium flex items-center gap-1">
               <MapPin className="w-3 h-3 text-gold-400" />
               {profileData.location}
-            </span>
+            </span> */}
           </motion.div>
 
           {/* 2. Headline with Typography Rhythm */}
@@ -147,7 +147,7 @@ export default function HeroSection() {
             initial={{ opacity: 0, y: 25 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.9, delay: 0.15 }}
-            className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-heading font-normal tracking-tight text-pearl-100 leading-[1.08] mb-4 sm:mb-6"
+            className="text-5xl md:text-6xl lg:text-7xl font-heading font-normal tracking-tight text-pearl-100 leading-[1.08] mb-4 sm:mb-6"
           >
             <span className="block font-light text-pearl-200">
               Crafting{' '}

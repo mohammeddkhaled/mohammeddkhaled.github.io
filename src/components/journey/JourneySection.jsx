@@ -41,7 +41,7 @@ export default function JourneySection() {
         <SectionHeading
           number="03"
           title="The Evolution"
-          subtitle="An interactive life path traveling from secondary education to full stack team lead & engineering mastery."
+          subtitle="An interactive life path traveling from  education to full stack team lead & engineering mastery."
         />
 
         {/* Milestone Horizontal Stepper Dock */}
