@@ -3,29 +3,17 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowLeft, Building2, FolderGit2 } from 'lucide-react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import projectsData from '@/data/projects.json';
-import ProjectCard from '@/components/projects/ProjectCard.jsx';
+import ProjectPreviewCard from '@/components/projects/ProjectPreviewCard.jsx';
 
 export default function ProjectsPage() {
   const navigate = useNavigate();
   const location = useLocation();
   const [activeTab, setActiveTab] = useState('company'); // 'company' | 'personal'
   
-  // Scroll to top or specific element on mount and state change
+  // Scroll to top on mount
   useEffect(() => {
-    if (location.state?.scrollTo) {
-      setTimeout(() => {
-        const el = document.getElementById(location.state.scrollTo);
-        if (el) {
-          // Calculate offset to not hide behind header
-          const yOffset = -100;
-          const y = el.getBoundingClientRect().top + window.pageYOffset + yOffset;
-          window.scrollTo({ top: y, behavior: 'smooth' });
-        }
-      }, 500);
-    } else {
-      window.scrollTo(0, 0);
-    }
-  }, [location.state, activeTab]);
+    window.scrollTo(0, 0);
+  }, [location.pathname]);
 
   const companyProjects = (projectsData.companyProjects || []).sort((a, b) => (a.order || 99) - (b.order || 99));
   const personalProjects = (projectsData.personalProjects || []).sort((a, b) => (a.order || 99) - (b.order || 99));
@@ -111,7 +99,7 @@ export default function ProjectsPage() {
           >
             {currentProjects.length > 0 ? (
               currentProjects.map(project => (
-                <ProjectCard key={project.id} project={project} />
+                <ProjectPreviewCard key={project.id} project={project} />
               ))
             ) : (
               <div className="col-span-full py-20 text-center text-pearl-400 font-mono text-sm border border-white/5 rounded-3xl bg-white/[0.02]">

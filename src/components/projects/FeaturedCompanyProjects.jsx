@@ -1,8 +1,7 @@
 import React from 'react';
-import { motion } from 'framer-motion';
-import { ExternalLink, ArrowRight } from 'lucide-react';
-import { SiGithub } from 'react-icons/si';
 import { useNavigate } from 'react-router-dom';
+import { ArrowRight } from 'lucide-react';
+import FeaturedProjectCard from './FeaturedProjectCard.jsx';
 
 export default function FeaturedCompanyProjects({ projects }) {
   const navigate = useNavigate();
@@ -10,13 +9,14 @@ export default function FeaturedCompanyProjects({ projects }) {
   if (!projects || projects.length === 0) return null;
 
   return (
-    <div className="w-full">
-      <div className="flex items-center justify-between mb-16">
+    <div className="w-full relative z-10">
+      {/* Section Intro */}
+      <div className="flex items-center justify-between mb-8 md:mb-16 px-6 lg:px-12 max-w-[1400px] mx-auto">
         <div>
-          <h3 className="font-heading text-3xl md:text-4xl font-bold text-pearl-100 mb-2">
-            Enterprise Solutions
+          <h3 className="font-heading text-3xl md:text-5xl font-bold text-pearl-100 mb-3">
+            Featured Engineering Works
           </h3>
-          <p className="font-mono text-sm text-pearl-400">Featured Company Projects</p>
+          <p className="font-mono text-sm text-pearl-400">Premium Case Studies</p>
         </div>
         <button 
           onClick={() => {
@@ -30,94 +30,20 @@ export default function FeaturedCompanyProjects({ projects }) {
         </button>
       </div>
 
-      <div className="flex flex-col gap-24 md:gap-32">
+      {/* Pinned Showcase Area */}
+      <div className="relative w-full">
         {projects.map((project, index) => (
-          <div 
+          <FeaturedProjectCard 
             key={project.id} 
-            className={`flex flex-col ${index % 2 !== 0 ? 'lg:flex-row-reverse' : 'lg:flex-row'} gap-12 lg:gap-20 items-center`}
-          >
-            {/* Visual Side (Mocking an image since screenshots are empty) */}
-            <div className="w-full lg:w-[55%] relative group">
-              <div className="absolute inset-0 bg-gold-500/20 blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-700 rounded-[40px]" />
-              <div className="relative aspect-[16/10] w-full bg-midnight-900 border border-white/5 rounded-[32px] overflow-hidden flex items-center justify-center group-hover:border-white/10 transition-colors duration-500 shadow-2xl">
-                 <div className="absolute inset-0 bg-[url('/noise.png')] opacity-[0.05] mix-blend-overlay z-10" />
-                 <div className="text-center z-20">
-                   <div className="w-20 h-20 mx-auto mb-6 rounded-2xl bg-gradient-to-br from-gold-500/20 to-gold-500/5 border border-gold-500/20 flex items-center justify-center">
-                     <span className="font-heading text-4xl text-gold-400/50 font-bold">{project.title.charAt(0)}</span>
-                   </div>
-                   <h4 className="font-heading text-2xl font-bold text-pearl-100/50">{project.company}</h4>
-                 </div>
-              </div>
-            </div>
-
-            {/* Content Side */}
-            <div className="w-full lg:w-[45%] flex flex-col">
-              <div className="flex items-center gap-3 mb-6">
-                <span className="font-mono text-xs px-3 py-1 rounded-full bg-gold-500/10 text-gold-400 border border-gold-500/20 font-medium">
-                  {project.timeline}
-                </span>
-              </div>
-              
-              <h3 className="font-heading text-3xl md:text-5xl font-bold text-pearl-100 mb-6 leading-[1.1]">
-                {project.title}
-              </h3>
-              
-              <p className="text-pearl-200/80 font-body text-lg leading-[1.8] font-light mb-8">
-                {project.fullDescription || project.shortDescription}
-              </p>
-              
-              <div className="flex flex-wrap gap-2 mb-10">
-                {project.technologies.slice(0, 6).map((tech, idx) => (
-                  <span 
-                    key={idx}
-                    className="font-mono text-[11px] text-pearl-300 bg-white/5 px-3 py-1.5 rounded-md border border-white/5"
-                  >
-                    {tech}
-                  </span>
-                ))}
-                {project.technologies.length > 6 && (
-                  <span className="font-mono text-[11px] text-pearl-400 px-2 py-1.5">
-                    +{project.technologies.length - 6} more
-                  </span>
-                )}
-              </div>
-
-              <div className="flex items-center gap-4 text-black ">
-                <button
-                  onClick={() => {
-                    navigate('/projects', { state: { scrollTo: project.id } });
-                  }}
-                  className="flex items-center gap-2 px-6 py-3 rounded-full bg-midnight-800 text-pearl-100 font-heading text-sm font-bold border border-white/10 hover:bg-white/10 transition-all duration-300"
-                >
-                  Read More
-                </button>
-                {project.liveUrl && (
-                  <a 
-                    href={project.liveUrl}
-                    target="_blank"
-                    rel="noopener noreferrer" 
-                    className="flex items-center gap-2 px-6 py-3 rounded-full bg-gold-500  font-heading text-sm font-bold hover:shadow-glow hover:scale-105 transition-all duration-300"
-                  >
-                    Visit Live Site <ExternalLink className="w-4 h-4" />
-                  </a>
-                )}
-                {project.githubUrl && (
-                  <a 
-                    href={project.githubUrl}
-                    target="_blank"
-                    rel="noopener noreferrer" 
-                    className="p-3 rounded-full bg-white/5 text-pearl-100 hover:bg-white/10 transition-colors duration-300"
-                  >
-                    <SiGithub className="w-5 h-5" />
-                  </a>
-                )}
-              </div>
-            </div>
-          </div>
+            project={project} 
+            index={index} 
+            total={projects.length} 
+          />
         ))}
       </div>
 
-      <div className="mt-16 md:hidden flex justify-center">
+      {/* Mobile View All Button */}
+      <div className="mt-16 md:hidden flex justify-center px-6">
         <button 
           onClick={() => {
             navigate('/projects');

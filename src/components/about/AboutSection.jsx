@@ -222,7 +222,7 @@ const executeVision = () => {
                   <img 
                     src={profileData.avatarUrl} 
                     alt={profileData.name}
-                    className="w-full h-full object-cover object-center opacity-90 mix-blend-luminosity hover:mix-blend-normal transition-all duration-700"
+                    className="w-full h-full object-fit object-center opacity-90 mix-blend-luminosity hover:mix-blend-normal transition-all duration-700"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-midnight-950/90 via-midnight-950/20 to-transparent" />
                 </motion.div>

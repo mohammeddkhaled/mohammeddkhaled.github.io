@@ -1,7 +1,7 @@
 import React from 'react';
 import SectionHeading from '@/components/common/SectionHeading.jsx';
-import FeaturedCompanyProjects from './FeaturedCompanyProjects.jsx';
-import FeaturedPersonalProjects from './FeaturedPersonalProjects.jsx';
+import FeaturedCompanyBento from './FeaturedCompanyBento.jsx';
+import FeaturedPersonalStaggered from './FeaturedPersonalStaggered.jsx';
 import projectsData from '@/data/projects.json';
 
 export default function ProjectsSection() {
@@ -23,18 +23,18 @@ export default function ProjectsSection() {
         <SectionHeading
           number="05"
           title="Featured Works"
-          subtitle="A curated selection of enterprise solutions and personal experiments."
+          subtitle="A curated selection of my finest architectural and engineering efforts."
         />
+      </div>
 
-        <div className="mt-16 flex flex-col w-full">
-          {featuredCompany.length > 0 && (
-            <FeaturedCompanyProjects projects={featuredCompany} />
-          )}
-          
-          {featuredPersonal.length > 0 && (
-            <FeaturedPersonalProjects projects={featuredPersonal} />
-          )}
-        </div>
+      <div className="flex flex-col w-full">
+        {featuredCompany.length > 0 && (
+          <FeaturedCompanyBento projects={featuredCompany} />
+        )}
+        
+        {featuredPersonal.length > 0 && (
+          <FeaturedPersonalStaggered projects={featuredPersonal} />
+        )}
       </div>
     </section>
   );
