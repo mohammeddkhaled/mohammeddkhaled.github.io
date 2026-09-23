@@ -82,13 +82,21 @@ export default function FeaturedCompanyProjects({ projects }) {
                 )}
               </div>
 
-              <div className="flex items-center gap-4">
+              <div className="flex items-center gap-4 text-black ">
+                <button
+                  onClick={() => {
+                    navigate('/projects', { state: { scrollTo: project.id } });
+                  }}
+                  className="flex items-center gap-2 px-6 py-3 rounded-full bg-midnight-800 text-pearl-100 font-heading text-sm font-bold border border-white/10 hover:bg-white/10 transition-all duration-300"
+                >
+                  Read More
+                </button>
                 {project.liveUrl && (
                   <a 
                     href={project.liveUrl}
                     target="_blank"
                     rel="noopener noreferrer" 
-                    className="flex items-center gap-2 px-6 py-3 rounded-full bg-gold-500 text-midnight-950 font-heading text-sm font-bold hover:shadow-glow hover:scale-105 transition-all duration-300"
+                    className="flex items-center gap-2 px-6 py-3 rounded-full bg-gold-500  font-heading text-sm font-bold hover:shadow-glow hover:scale-105 transition-all duration-300"
                   >
                     Visit Live Site <ExternalLink className="w-4 h-4" />
                   </a>

@@ -7,7 +7,7 @@ import { fadeInUp } from '@/animations/variants.js';
 
 export default function ProjectCard({ project }) {
   return (
-    <motion.div variants={fadeInUp} className="h-full">
+    <motion.div id={project.id} variants={fadeInUp} className="h-full">
       <GlowCard className="h-full flex flex-col p-8 sm:p-10 relative overflow-hidden group border border-white/5 bg-midnight-900/50 hover:border-gold-500/30 transition-colors duration-500 rounded-3xl shadow-xl">
         
         {/* Subtle Background Glow */}

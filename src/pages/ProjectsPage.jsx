@@ -1,18 +1,31 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowLeft, Building2, FolderGit2 } from 'lucide-react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 import projectsData from '@/data/projects.json';
 import ProjectCard from '@/components/projects/ProjectCard.jsx';
 
 export default function ProjectsPage() {
   const navigate = useNavigate();
+  const location = useLocation();
   const [activeTab, setActiveTab] = useState('company'); // 'company' | 'personal'
   
-  // Scroll to top on mount
+  // Scroll to top or specific element on mount and state change
   useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
+    if (location.state?.scrollTo) {
+      setTimeout(() => {
+        const el = document.getElementById(location.state.scrollTo);
+        if (el) {
+          // Calculate offset to not hide behind header
+          const yOffset = -100;
+          const y = el.getBoundingClientRect().top + window.pageYOffset + yOffset;
+          window.scrollTo({ top: y, behavior: 'smooth' });
+        }
+      }, 500);
+    } else {
+      window.scrollTo(0, 0);
+    }
+  }, [location.state, activeTab]);
 
   const companyProjects = (projectsData.companyProjects || []).sort((a, b) => (a.order || 99) - (b.order || 99));
   const personalProjects = (projectsData.personalProjects || []).sort((a, b) => (a.order || 99) - (b.order || 99));
