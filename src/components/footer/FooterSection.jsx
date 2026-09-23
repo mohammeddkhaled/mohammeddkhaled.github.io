@@ -1,14 +1,17 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ArrowUp, Heart, Sparkles, FileText } from 'lucide-react';
+import { ArrowUp, Heart, Sparkles, FileText, Mail } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 import profileData from '@/data/profile.json';
 import socialData from '@/data/social.json';
 import { NAV_ITEMS } from '@/constants/index.js';
 import { scrollToSection, getCurrentYear } from '@/utils/helpers.js';
 import * as SiIcons from 'react-icons/si';
-
+import { FaLinkedin } from 'react-icons/fa';
 export default function FooterSection() {
   const currentYear = getCurrentYear();
+  const navigate = useNavigate();
+
 
   return (
     <footer className="relative bg-midnight-950 border-t border-midnight-800/80 pt-16 pb-12 overflow-hidden">
@@ -48,7 +51,14 @@ export default function FooterSection() {
               {NAV_ITEMS.map((item) => (
                 <button
                   key={item.id}
-                  onClick={() => scrollToSection(item.id)}
+                  onClick={() => {
+                    if (item.id === 'projects') {
+                      navigate('/projects');
+                      window.scrollTo(0, 0);
+                    } else {
+                      scrollToSection(item.id);
+                    }
+                  }}
                   className="text-left font-body text-sm text-pearl-300 hover:text-gold-300 transition-colors focus:outline-none"
                 >
                   {item.label}
@@ -70,7 +80,11 @@ export default function FooterSection() {
 
             <div className="flex items-center gap-2">
               {socialData.map((s) => {
-                const IconComponent = SiIcons[s.icon] || FileText;
+                let IconComponent = SiIcons[s.icon];
+                if (s.id === 'email') IconComponent = Mail;
+                if (s.id === 'linkedin') IconComponent = FaLinkedin;
+                if (!IconComponent) IconComponent = FileText;
+                
                 return (
                   <a
                     key={s.id}
