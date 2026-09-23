@@ -133,7 +133,7 @@ export default function HeroSection() {
               <span className="relative inline-flex rounded-full h-2 w-2 bg-success" />
             </span>
             <span className="font-mono text-xs font-semibold text-pearl-200 uppercase tracking-wider">
-              Full Stack Developer | Software Developer
+              Full Stack Developer | Software Engineer
             </span>
             <div className="w-[1px] h-3 bg-gold-500/30" />
             {/* <span className="font-mono text-xs text-gold-400 font-medium flex items-center gap-1">

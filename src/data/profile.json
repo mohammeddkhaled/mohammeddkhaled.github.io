@@ -3,7 +3,7 @@
   "firstName": "Mohammed",
   "lastName": "Khaled",
   "initials": "MK",
-  "role": "Full Stack Developer",
+  "role": "Full Stack Developer | Software Engineer",
   "tagline": "Building scalable web solutions from architecture to deployment",
   "shortBio": "I design and build robust, scalable web applications — from database architecture to polished user interfaces. Currently leading backend-focused development at Luminate Web Solutions.",
   "fullBio": [
@@ -19,7 +19,7 @@
   "stats": [
     { "label": "Years Experience", "value": "1", "suffix": "" },
     { "label": "Projects Delivered", "value": "10", "suffix": "+" },
-    { "label": "Technologies", "value": "10", "suffix": "+" },
+    { "label": "Technologies", "value": "12", "suffix": "+" },
     { "label": "Team Members Led", "value": "3", "suffix": "+" }
   ],
   "languages": ["English", "Hindi", "Telugu"]

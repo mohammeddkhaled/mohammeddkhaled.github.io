@@ -16,7 +16,7 @@ export default function HomePage() {
   return (
     <>
       <Helmet>
-        <title>{settingsData.siteTitle || `${profileData.name} — Full Stack Developer`}</title>
+        <title>{settingsData.siteTitle || `${profileData.name} — Full Stack Developer | Software Engineer`}</title>
         <meta name="description" content={settingsData.siteDescription} />
         <meta property="og:title" content={settingsData.siteTitle} />
         <meta property="og:description" content={settingsData.siteDescription} />
