@@ -4,13 +4,12 @@
 export const SECTIONS = [
   { id: 'home', label: 'Home', number: '01' },
   { id: 'about', label: 'About', number: '02' },
-  { id: 'experience', label: 'Experience', number: '06' },
-  { id: 'journey', label: 'Journey', number: '03' },
-  { id: 'skills', label: 'Skills', number: '04' },
-  { id: 'projects', label: 'Projects', number: '05' },
-  { id: 'education', label: 'Education', number: '07' },
-  { id: 'certifications', label: 'Certifications', number: '08' },
-  { id: 'contact', label: 'Contact', number: '09' },
+  { id: 'experience', label: 'Experience', number: '03' },
+  { id: 'journey', label: 'Journey', number: '04' },
+  { id: 'skills', label: 'Skills', number: '05' },
+  { id: 'projects', label: 'Projects', number: '06' },
+  { id: 'certifications', label: 'Certifications', number: '07' },
+  { id: 'contact', label: 'Contact', number: '08' },
 ];
 
 /**

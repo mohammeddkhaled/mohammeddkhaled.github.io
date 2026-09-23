@@ -6,7 +6,6 @@ import JourneySection from '@/components/journey/JourneySection.jsx';
 import SkillsSection from '@/components/skills/SkillsSection.jsx';
 import ProjectsSection from '@/components/projects/ProjectsSection.jsx';
 import ExperienceSection from '@/components/experience/ExperienceSection.jsx';
-import EducationSection from '@/components/education/EducationSection.jsx';
 import CertificationsSection from '@/components/certifications/CertificationsSection.jsx';
 import ContactSection from '@/components/contact/ContactSection.jsx';
 import settingsData from '@/data/settings.json';
@@ -33,7 +32,6 @@ export default function HomePage() {
         <JourneySection />
         <SkillsSection />
         <ProjectsSection />
-        <EducationSection />
         <CertificationsSection />
         <ContactSection />
       </div>
