@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { Mail, Send, Phone, MapPin, CheckCircle2, MessageSquare } from 'lucide-react';
+import { Mail, Send, Phone, MapPin, CheckCircle2, AlertCircle } from 'lucide-react';
+import { useForm, ValidationError } from '@formspree/react';
 import SectionHeading from '@/components/common/SectionHeading.jsx';
 import GlowCard from '@/components/common/GlowCard.jsx';
 import Button from '@/components/common/Button.jsx';
@@ -16,9 +17,17 @@ export default function ContactSection() {
     message: '',
   });
 
+  const [state, handleSubmit, reset] = useForm(import.meta.env.VITE_FORMSPREE_FORM_ID);
+  
   const [submitted, setSubmitted] = useState(false);
-  const [isSubmitting, setIsSubmitting] = useState(false);
   const [copied, setCopied] = useState(false);
+
+  useEffect(() => {
+    if (state.succeeded) {
+      setSubmitted(true);
+      setFormData({ name: '', email: '', subject: '', message: '' });
+    }
+  }, [state.succeeded]);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -31,13 +40,9 @@ export default function ContactSection() {
     setTimeout(() => setCopied(false), 2000);
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    setTimeout(() => {
-      setIsSubmitting(false);
-      setSubmitted(true);
-    }, 1000);
+  const handleSendAnother = () => {
+    setSubmitted(false);
+    if (typeof reset === 'function') reset();
   };
 
   return (
@@ -160,25 +165,28 @@ export default function ContactSection() {
                     <CheckCircle2 className="w-8 h-8" />
                   </div>
                   <h3 className="text-2xl font-heading font-extrabold text-pearl-100 mb-2">
-                    Message Sent Successfully
+                    Thank you! Your message has been sent successfully.
                   </h3>
                   <p className="text-sm text-pearl-300 font-body max-w-md">
-                    Thank you for reaching out, {formData.name || 'friend'}. I will review your request and get back to you promptly.
+                    I will review your request and get back to you promptly.
                   </p>
                   <Button
                     variant="outline"
                     size="sm"
                     className="mt-8"
-                    onClick={() => {
-                      setSubmitted(false);
-                      setFormData({ name: '', email: '', subject: '', message: '' });
-                    }}
+                    onClick={handleSendAnother}
                   >
                     Send Another Message
                   </Button>
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} className="flex flex-col gap-6">
+                  {state.errors && state.errors.length > 0 && (
+                    <div className="flex items-center gap-3 p-4 rounded-xl bg-rose-500/10 border border-rose-500/20 text-rose-400">
+                      <AlertCircle className="w-5 h-5 shrink-0" />
+                      <span className="font-body text-sm font-medium">Something went wrong. Please try again.</span>
+                    </div>
+                  )}
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                     {/* Name */}
                     <div className="flex flex-col gap-2">
@@ -231,7 +239,7 @@ export default function ContactSection() {
                     />
                   </div>
 
-                  {/* Message */}
+                    {/* Message */}
                   <div className="flex flex-col gap-2">
                     <label htmlFor="message" className="font-mono text-xs font-bold text-pearl-300 uppercase tracking-wider">
                       Message *
@@ -240,6 +248,7 @@ export default function ContactSection() {
                       id="message"
                       name="message"
                       required
+                      minLength={10}
                       rows={5}
                       value={formData.message}
                       onChange={handleChange}
@@ -252,9 +261,10 @@ export default function ContactSection() {
                     type="submit"
                     variant="primary"
                     size="lg"
-                    isLoading={isSubmitting}
+                    isLoading={state.submitting}
+                    disabled={state.submitting}
                     icon={Send}
-                    className="w-full mt-2 shadow-gold py-4"
+                    className="w-full mt-2 shadow-gold py-4 disabled:opacity-50"
                   >
                     Send Message
                   </Button>
