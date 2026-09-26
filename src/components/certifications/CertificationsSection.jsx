@@ -9,7 +9,7 @@ import { fadeInUp, staggerContainer } from '@/animations/variants.js';
 
 export default function CertificationsSection() {
   return (
-    <section id="certifications" className="py-section relative overflow-hidden bg-midnight-950">
+    <section id="certifications" className="py-12 relative overflow-hidden bg-midnight-950">
       {/* Background Ambient Lighting */}
       <div className="absolute top-1/2 right-10 w-[500px] h-[500px] bg-gold-500/5 rounded-full blur-[160px] pointer-events-none" />
 

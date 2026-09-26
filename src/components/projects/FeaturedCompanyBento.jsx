@@ -13,7 +13,7 @@ export default function FeaturedCompanyBento({ projects }) {
   const displayProjects = projects.slice(0, 3); // Optimize for 3
 
   return (
-    <div className="w-full relative z-10 py-24 px-6 lg:px-12 max-w-[1400px] mx-auto">
+    <div className="w-full relative z-10 px-6 lg:px-12 section-container ">
       {/* Section Intro */}
       <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
         <div>

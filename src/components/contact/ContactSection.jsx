@@ -52,7 +52,7 @@ export default function ContactSection() {
   };
 
   return (
-    <section id="contact" className="py-section relative overflow-hidden bg-midnight-950">
+    <section id="contact" className=" py-12  relative overflow-hidden bg-midnight-950">
       {/* Background Glow */}
       <div className="absolute bottom-1/4 left-1/2 -translate-x-1/2 w-[700px] h-[700px] bg-gold-500/5 rounded-full blur-[200px] pointer-events-none" />
 

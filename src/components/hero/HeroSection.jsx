@@ -82,7 +82,7 @@ export default function HeroSection() {
       ref={containerRef}
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
-      className="relative section-container min-h-screen flex flex-col justify-between pt-20 sm:pt-24 pb-6 overflow-hidden bg-midnight-950 select-none"
+      className="relative min-h-screen max-w-[1400px] mx-auto flex flex-col justify-between pt-20 sm:pt-24 pb-6 overflow-hidden bg-midnight-950 select-none"
     >
       {/* Background Soft Radial Lighting */}
       <div
