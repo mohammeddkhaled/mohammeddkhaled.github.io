@@ -234,7 +234,15 @@ const executeVision = () => {
                   <div className="flex gap-6 font-mono text-xs text-pearl-300 uppercase tracking-widest border-t border-white/10 pt-6">
                     <span>{profileData.location.split(',')[0]}</span>
                     <span className="text-white/20">|</span>
-                    <span>{profileData.stats.find(s => s.label === 'Years Experience')?.value || '1'}+ Yrs Exp</span>
+                    <span>
+                      {(() => {
+                        const start = new Date('2025-11-01');
+                        const diff = Date.now() - start.getTime();
+                        const yearsRaw = diff / (1000 * 60 * 60 * 24 * 365.25);
+                        const years = Math.round(yearsRaw * 10) / 10;
+                        return years < 1 ? "1" : years.toString();
+                      })()}+ YRS EXP
+                    </span>
                   </div>
                 </div>
               </div>

@@ -240,21 +240,31 @@ export default function HeroSection() {
       {/* 6. Minimal Statistics Horizontal Strip */}
       <div className="section-container relative z-10 w-full border-t border-midnight-800/80 pt-4">
         <div className="flex flex-wrap items-center justify-between gap-4 max-w-5xl mx-auto">
-          {profileData.stats.map((stat, idx) => (
-            <React.Fragment key={idx}>
-              <div className="flex items-center gap-2.5">
-                <span className="font-heading text-xl sm:text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-gold-300 to-amber-400">
-                  {stat.value}{stat.suffix}
-                </span>
-                <span className="font-mono text-[11px] text-pearl-400 uppercase tracking-wider">
-                  {stat.label}
-                </span>
-              </div>
-              {idx < profileData.stats.length - 1 && (
-                <div className="hidden md:block w-[1px] h-5 bg-midnight-800" />
-              )}
-            </React.Fragment>
-          ))}
+          {profileData.stats.map((stat, idx) => {
+            let displayValue = stat.value;
+            if (stat.label.toLowerCase().includes('experience')) {
+              const start = new Date('2025-11-01');
+              const diff = Date.now() - start.getTime();
+              const yearsRaw = diff / (1000 * 60 * 60 * 24 * 365.25);
+              const years = Math.round(yearsRaw * 10) / 10;
+              displayValue = years < 1 ? "1" : years.toString();
+            }
+            return (
+              <React.Fragment key={idx}>
+                <div className="flex items-center gap-2.5">
+                  <span className="font-heading text-xl sm:text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-gold-300 to-amber-400">
+                    {displayValue}{stat.suffix}
+                  </span>
+                  <span className="font-mono text-[11px] text-pearl-400 uppercase tracking-wider">
+                    {stat.label}
+                  </span>
+                </div>
+                {idx < profileData.stats.length - 1 && (
+                  <div className="hidden md:block w-[1px] h-5 bg-midnight-800" />
+                )}
+              </React.Fragment>
+            );
+          })}
         </div>
       </div>
 
