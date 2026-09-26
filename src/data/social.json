@@ -3,7 +3,7 @@
     "id": "linkedin",
     "platform": "LinkedIn",
     "url": "https://www.linkedin.com/in/mohammedkhaled30711182a8",
-    "icon": "SiLinkedin",
+    "icon": "FaLinkedin",
     "label": "Connect on LinkedIn",
     "action": "redirect",
     "order": 1
@@ -12,7 +12,7 @@
     "id": "github",
     "platform": "GitHub",
     "url": "https://github.com/mohammeddkhaled",
-    "icon": "SiGithub",
+    "icon": "FaGithub",
     "label": "View GitHub Profile",
     "action": "redirect",
     "order": 2
@@ -30,7 +30,7 @@
     "id": "instagram",
     "platform": "Instagram",
     "url": "https://instagram.com/",
-    "icon": "SiInstagram",
+    "icon": "FaInstagram",
     "label": "Follow on Instagram",
     "action": "redirect",
     "order": 4
@@ -39,10 +39,9 @@
     "id": "whatsapp",
     "platform": "WhatsApp",
     "url": "https://wa.me/919502313716",
-    "icon": "SiWhatsapp",
+    "icon": "FaWhatsapp",
     "label": "Chat on WhatsApp",
     "action": "chat",
     "order": 5
   }
-
 ]

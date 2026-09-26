@@ -6,7 +6,7 @@ import profileData from '@/data/profile.json';
 import socialData from '@/data/social.json';
 import { scrollToSection } from '@/utils/helpers.js';
 import Button from '@/components/common/Button.jsx';
-import * as SiIcons from 'react-icons/si';
+import * as FaIcons from 'react-icons/fa';
 import { gsap } from '@/animations/gsapConfig.js';
 
 export default function HeroSection() {
@@ -82,7 +82,7 @@ export default function HeroSection() {
       ref={containerRef}
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
-      className="relative w-full min-h-screen flex flex-col justify-between pt-20 sm:pt-24 pb-6 overflow-hidden bg-midnight-950 select-none"
+      className="relative section-container min-h-screen flex flex-col justify-between pt-20 sm:pt-24 pb-6 overflow-hidden bg-midnight-950 select-none"
     >
       {/* Background Soft Radial Lighting */}
       <div
@@ -214,7 +214,7 @@ export default function HeroSection() {
             className="flex items-center justify-center gap-3 mb-3"
           >
             {socialData.map((s) => {
-              const IconComponent = SiIcons[s.icon] || Mail;
+              const IconComponent = FaIcons[s.icon] || Mail;
               return (
                 <a
                   key={s.id}
