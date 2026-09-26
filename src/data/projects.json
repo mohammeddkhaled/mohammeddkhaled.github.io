@@ -6,10 +6,35 @@
       "company": "Luminate Web Solutions",
       "shortDescription": "End-to-end internal ERP system with complete technical lifecycle ownership — from architecture to deployment.",
       "fullDescription": "Leading the end-to-end development of an internal ERP system, owning the complete technical lifecycle from requirement analysis to implementation. Designed the overall system architecture, backend structure (MVC), and core business logic.",
-      "technologies": ["Node.js", "Express.js", "SQL", "Sequelize ORM", "JWT", "React.js", "REST APIs","Multer","Bcrypt"],
-      "screenshots": [],
+      "technologies": [
+      "Node.js",
+        "Express.js",
+        "MySQL",
+        "Sequelize ORM",
+        "JWT Authentication",
+        "Refresh Tokens",
+        "REST API",
+        "React.js",
+        "Vite",
+        "Tailwind CSS",
+        "Multer",
+        "bcrypt",
+        "Cors",
+        "dotenv",
+        "Git",
+        "GitHub",
+        "Axios",
+        "XLSX",
+        "csv-parser"
+      ],
+      "screenshots": [
+        "public/bimq-1.png",
+        "public/bimq-2.png",
+        "public/bimq-3.png",
+        "public/bimq-4.png"
+      ],
       "liveUrl": "https://bimqubator.com",
-      "githubUrl": "",
+      "githubUrl": "https://github.com/Luminate-Web-Solutions/bimqubator_new_erp",
       "features": [
         "Complete system architecture with MVC pattern",
         "Secure RESTful APIs for multiple ERP modules",
@@ -31,7 +56,7 @@
         "Code review & quality assurance",
         "Frontend integration"
       ],
-      "timeline": "2025 – Present",
+      "timeline": "Dec 2025 – Present",
       "status": "in-progress",
       "isFeatured": true,
       "order": 1
@@ -42,10 +67,34 @@
       "company": "Luminate Web Solutions",
       "shortDescription": "Comprehensive institute management platform with RBAC supporting Student, Trainer, Admin, and Director roles.",
       "fullDescription": "Developed a comprehensive institute management platform with a secure Role-Based Access Control (RBAC) system supporting Student, Trainer, Admin, and Director roles. End-to-end student lifecycle management with registration, approvals, assessments, and progress tracking.",
-      "technologies": ["Node.js", "Express.js", "SQL", "Sequelize", "JWT", "React.js", "REST APIs", "Multer","Bcrypt"],
-      "screenshots": [],
+      "technologies": [
+        "Node.js",
+        "Express.js",
+        "MySQL",
+        "Sequelize ORM",
+        "JWT Authentication",
+        "Refresh Tokens",
+        "REST API",
+        "React.js",
+        "Vite",
+        "Tailwind CSS",
+        "Multer",
+        "bcrypt",
+        "Cors",
+        "dotenv",
+        "Git",
+        "GitHub",
+        "Axios",
+        "XLSX",
+        "csv-parser"
+      ],
+      "screenshots": [
+        "public/sdhubq-1.png",
+        "public/sdhubq-2.png",
+        "public/sdhubq-3.png"
+      ],
       "liveUrl": "https://sdhubqutubshahi.com",
-      "githubUrl": "",
+      "githubUrl": "https://github.com/Luminate-Web-Solutions/SDHUB_React_ERP",
       "features": [
         "Role-Based Access Control (RBAC) — Student, Trainer, Admin, Director",
         "Student lifecycle: registration → approval → assessments → progress tracking",
@@ -68,10 +117,70 @@
         "Dashboard development",
         "Workflow automation"
       ],
-      "timeline": "2025 – Present",
+      "timeline": "May 2026 – July 2026",
       "status": "completed",
       "isFeatured": true,
       "order": 2
+    },
+    {
+      "id": "sporeda-website-adminpanel",
+      "title": "SPOREDA - Sports, Recreation & Community Management Platform",
+      "company": "Luminate Web Solution",
+      "shortDescription": "A full-stack platform for managing sports programmes, events, blogs, registrations, CMS content, and administration with secure authentication, role-based access, analytics, and a scalable REST API architecture.",
+      "fullDescription": "SPOREDA is a comprehensive sports and recreation management platform designed to help organizations manage programmes, events, blogs, testimonials, CMS content, and participant registrations from a centralized admin panel. The platform includes secure JWT authentication with refresh tokens, role-based access control, reusable REST APIs, dashboard analytics, media management, and a scalable backend architecture built using Node.js, Express.js, Sequelize, and MySQL. The project focuses on maintainability, modular architecture, security, and providing administrators with complete control over website content and community activities.",
+      "technologies": [
+        "Node.js",
+        "Express.js",
+        "MySQL",
+        "Sequelize ORM",
+        "JWT Authentication",
+        "Refresh Tokens",
+        "REST API",
+        "React.js",
+        "Vite",
+        "Tailwind CSS",
+        "Multer",
+        "Express Validator",
+        "bcrypt",
+        "dotenv",
+        "Git",
+        "GitHub"
+      ],
+      "screenshots": [
+        "public/sporeda-1.png",
+        "public/sporeda-2.png",
+        "public/sporeda-3.png",
+        "public/sporeda-4.png",
+        "public/sporeda-5.png"
+      ],
+      "liveUrl": "https://sporeda.com/",
+      "githubUrl": "https://github.com/Luminate-Web-Solutions/sporeda",
+      "features": [
+        "Built a secure authentication system with JWT Access Tokens, Refresh Tokens, Auto Logout, Role-Based Authorization, Profile Management, Password Reset, and Protected APIs.",
+        "Developed a reusable Category Management module supporting multiple modules (Blog & Events) with dynamic category assignment.",
+        "Built a complete Blog/Insights CMS including CRUD operations, SEO-friendly slugs, rich text content, featured blogs, image uploads, ordering, and status management.",
+        "Developed a full Event Management module with registrations, participant limits, registration deadlines, event scheduling, organizers, locations, featured events, and registration tracking.",
+        "Implemented an Event Registration system with unique registration numbers, participant management, registration statuses, and event-wise registration analytics.",
+        "Designed a Dashboard API providing summary statistics, upcoming events, registration trends, event performance analytics, recent registrations, and quick statistics for the admin panel.",
+        "Built reusable media upload APIs with centralized Multer configuration, validation, automatic cleanup on errors, and support for images, videos, and PDF documents."
+      ],
+      "challenges": [
+        "Designed a scalable modular backend architecture where every feature follows a consistent structure (Model → Validation → Service → Controller → Routes), making future modules easy to develop and maintain.",
+        "Implemented secure authentication using JWT Access Tokens, Refresh Tokens, middleware protection, automatic session handling, and inactivity-based logout while maintaining a clean authentication flow.",
+        "Developed efficient dashboard analytics by combining multiple modules, registration statistics, event performance, and summary reports into a single optimized API without compromising readability or maintainability."
+      ],
+      "responsibilities": [
+        "Led the overall backend architecture and API development for the SPOREDA platform.",
+        "Designed the complete MySQL database schema, Sequelize models, relationships, validations, and REST API structure.",
+        "Implemented secure authentication, authorization, refresh token management, protected routes, and user session handling.",
+        "Developed major backend modules including Authentication, Categories, Blogs, Events, Event Registrations, Dashboard Analytics, CMS, and Media Upload Management.",
+        "Contributed to frontend development by integrating APIs, implementing dynamic pages, improving UI functionality, and collaborating with the frontend team.",
+        "Reviewed project architecture, solved complex backend issues, optimized APIs, and guided development to ensure scalability, maintainability, and production-ready code quality."
+      ],
+      "timeline": "July 2026 - August 2026",
+      "status": "completed",
+      "isFeatured": "true",
+      "order": "3"
     }
   ],
   "personalProjects": []
