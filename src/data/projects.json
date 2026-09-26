@@ -183,5 +183,51 @@
       "order": "3"
     }
   ],
-  "personalProjects": []
+  "personalProjects": [
+    {
+      "id": "personal-portfolio-v2",
+      "title": "Interactive Developer Portfolio",
+      "company": "Personal Project",
+      "shortDescription": "A cinematic, highly interactive personal portfolio built with React, Tailwind CSS, and advanced animation libraries.",
+      "fullDescription": "An immersive, senior-designer level personal portfolio web application designed to showcase professional experience, featured projects, and technical skills. Built with a focus on modern web design principles, featuring complex scroll-triggered animations using GSAP and Framer Motion, glassmorphism UI elements, seamless page transitions, and responsive parallax layouts.",
+      "technologies": [
+        "React.js",
+        "Vite",
+        "Tailwind CSS",
+        "Framer Motion",
+        "GSAP",
+        "Lucide React",
+        "React Router DOM"
+      ],
+      "screenshots": [
+        "public/portfolio-1.png",
+        "public/portfolio-2.png",
+        "public/portfolio-3.png",
+        "public/portfolio-4.png"
+      ],
+      "liveUrl": "https://mohammeddkhaled.github.io/",
+      "githubUrl": "https://github.com/mohammeddkhaled/mohammeddkhaled.github.io",
+      "features": [
+        "Scroll-triggered cinematic animations using GSAP and Framer Motion",
+        "Dynamic experience calculator and JSON-driven content architecture",
+        "Fully responsive split-screen layouts and custom UI components",
+        "Custom SVG noise textures and interactive mouse parallax effects",
+        "Performance optimized with Vite and Tailwind"
+      ],
+      "challenges": [
+        "Designing complex cross-browser compatible scroll animations that feel natural and performant.",
+        "Managing state and refs across multiple nested framer-motion components for seamless transitions.",
+        "Balancing heavy visual aesthetics (blurs, gradients, particles) with smooth 60fps rendering performance."
+      ],
+      "responsibilities": [
+        "Designed the complete UI/UX with a focus on a premium, dark-mode aesthetic.",
+        "Implemented all frontend code, animations, and data-driven component structures.",
+        "Optimized asset loading and rendering performance for smooth scroll experiences."
+      ],
+      "timeline": "Sep 2026",
+      "status": "completed",
+      "isFeatured": true,
+      "order": 1
+    }
+  ]
 }
