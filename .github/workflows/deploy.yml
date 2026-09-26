@@ -28,6 +28,8 @@ jobs:
 
       - run: npm install
       - run: npm run build
+        env:
+          VITE_FORMSPREE_FORM_ID: ${{ vars.VITE_FORMSPREE_FORM_ID }}
 
       - uses: actions/configure-pages@v5
 
