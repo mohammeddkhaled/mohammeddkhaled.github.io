@@ -17,7 +17,13 @@ export default function ContactSection() {
     message: '',
   });
 
-  const [state, handleSubmit, reset] = useForm(import.meta.env.VITE_FORMSPREE_FORM_ID);
+  const formId = import.meta.env.VITE_FORMSPREE_FORM_ID;
+
+  console.log("=== Formspree Debug ===");
+  console.log("Form ID:", formId);
+  console.log("All env:", import.meta.env);
+
+  const [state, handleSubmit, reset] = useForm(formId);
   
   const [submitted, setSubmitted] = useState(false);
   const [copied, setCopied] = useState(false);
@@ -239,7 +245,7 @@ export default function ContactSection() {
                     />
                   </div>
 
-                    {/* Message */}
+                  {/* Message */}
                   <div className="flex flex-col gap-2">
                     <label htmlFor="message" className="font-mono text-xs font-bold text-pearl-300 uppercase tracking-wider">
                       Message *
