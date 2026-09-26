@@ -94,11 +94,14 @@ export default function JourneySection() {
       if (!isHovered && scrollRef.current) {
         const { scrollTop, scrollHeight, clientHeight } = scrollRef.current;
         
-        // Only scroll if we haven't reached the absolute bottom
-        if (scrollTop + clientHeight < scrollHeight - 1) {
-          const deltaTime = time - lastTime;
-          // Speed: 35 pixels per second
-          scrollRef.current.scrollTop += (35 * deltaTime) / 1000;
+        const deltaTime = time - lastTime;
+        const scrollAmount = (35 * deltaTime) / 1000; // Speed: 35 pixels per second
+        
+        // Loop logic: if we hit the bottom, snap back to the top
+        if (scrollTop + clientHeight >= scrollHeight - 1) {
+          scrollRef.current.scrollTop = 0;
+        } else {
+          scrollRef.current.scrollTop += scrollAmount;
         }
       }
       lastTime = time;
