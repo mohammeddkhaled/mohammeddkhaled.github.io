@@ -4,22 +4,16 @@
     "company": "Luminate Web Solutions",
     "role": "Junior Full Stack Developer (Backend-Focused) | Team Lead",
     "period": "Nov 2025 – Present",
-    "startDate": "2025-11",
-    "endDate": null,
     "isCurrentRole": true,
     "location": "Hyderabad, India",
-    "description": "Leading cross-functional development teams in planning, designing, and delivering scalable web applications, enterprise solutions, and business management systems.",
     "achievements": [
-      "Lead cross-functional development teams for enterprise web applications",
-      "Drive technical decision-making, task allocation, and code reviews",
-      "Collaborate directly with stakeholders to translate business needs into technical solutions",
-      "Lead system architecture discussions and database design reviews",
-      "Mentor interns with technical guidance and knowledge-sharing sessions",
-      "Manage backend development efforts across multiple simultaneous projects"
+      "Develop and maintain ERP systems, Learning Management Systems (LMS), business websites, and admin panels from planning to production.",
+      "Design scalable backend architecture, business logic, REST APIs, and MySQL database schemas for enterprise applications.",
+      "Collaborate directly with clients to understand requirements, propose technical solutions, and deliver projects that meet business goals.",
+      "Lead a small development team by assigning frontend tasks, reviewing code, and mentoring junior developers throughout the development process.",
+      "Define project workflows, coordinate development activities, and ensure timely delivery following best development practices.",
+      "Deploy and maintain applications in production, troubleshoot issues, and optimize application performance and reliability."
     ],
-    "technologies": ["Node.js", "Express.js", "React.js", "SQL", "Sequelize", "JWT", "REST APIs", "Git"],
-    "logo": "",
-    "companyUrl": "https://luminatewebsol.com",
     "order": 1
   }
 ]

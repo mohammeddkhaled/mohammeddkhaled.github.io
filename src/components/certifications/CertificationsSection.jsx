@@ -69,9 +69,8 @@ export default function CertificationsSection() {
                   <div className="pt-6 border-t border-midnight-800 flex items-center justify-between text-xs font-mono text-pearl-300">
                     <div className="flex items-center gap-2">
                       <ShieldCheck className="w-4 h-4 text-gold-400" />
-                      <span>Verified Credential</span>
+                      <span> Credential ID: {cert.credentialId}</span>
                     </div>
-                    <span className="font-bold text-gold-400">OFFICIAL</span>
                   </div>
                 )}
               </GlowCard>

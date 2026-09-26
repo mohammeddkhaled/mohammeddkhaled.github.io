@@ -1,11 +1,8 @@
 {
   "name": "Mohammed Khaled",
-  "firstName": "Mohammed",
-  "lastName": "Khaled",
   "initials": "MK",
   "role": "Full Stack Developer | Software Engineer",
   "tagline": "Building scalable web solutions from architecture to deployment",
-  "shortBio": "I design and build robust, scalable web applications — from database architecture to polished user interfaces. Currently leading backend-focused development at Luminate Web Solutions.",
   "fullBio": [
     "With hands-on experience in building enterprise-grade applications — from ERP systems to institute management platforms — I bring a deep understanding of system design, RESTful APIs, and database architecture.",
     "I lead cross-functional teams, drive technical decisions, and mentor aspiring developers. My approach combines clean code, scalable architecture, and user-centric design to deliver impactful solutions.",
@@ -17,9 +14,9 @@
   "resumeUrl": "/khaled-resume-Sep2026.pdf",
   "avatarUrl": "/Profile.png",
   "stats": [
-    { "label": "Years Experience", "value": "1", "suffix": "" },
+    { "label": "Years Experience"  },
     { "label": "Projects Delivered", "value": "10", "suffix": "+" },
-    { "label": "Technologies", "value": "12", "suffix": "+" },
+    { "label": "Technologies", "value": "15", "suffix": "+" },
     { "label": "Team Members Led", "value": "3", "suffix": "+" }
   ],
   "languages": ["English", "Hindi", "Telugu"]

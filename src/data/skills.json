@@ -21,8 +21,8 @@
       { "name": "Express.js", "icon": "SiExpress", "level": "advanced" },
       { "name": "RESTful APIs", "icon": "SiPostman", "level": "advanced" },
       { "name": "JWT Auth", "icon": "SiJsonwebtokens", "level": "advanced" },
-      { "name": "Multer", "icon": "SiNodedotjs", "level": "intermediate" },
-      { "name": "Nodemailer", "icon": "SiMaildotru", "level": "intermediate" }
+      { "name": "Multer", "icon": "SiNodedotjs", "level": "advanced" },
+      { "name": "Nodemailer", "icon": "SiMaildotru", "level": "advanced" }
     ]
   },
   {
@@ -30,8 +30,8 @@
     "label": "Database",
     "icon": "Database",
     "skills": [
-      { "name": "SQL", "icon": "SiMysql", "level": "advanced" },
-      { "name": "Sequelize ORM", "icon": "SiSequelize", "level": "advanced" },
+      { "name": "SQL", "icon": "SiMysql", "level": "intermediate" },
+      { "name": "Sequelize ORM", "icon": "SiSequelize", "level": "intermediate" },
       { "name": "Database Design", "icon": "SiDiagramsdotnet", "level": "advanced" }
     ]
   },
@@ -41,7 +41,7 @@
     "icon": "Code",
     "skills": [
       { "name": "JavaScript", "icon": "SiJavascript", "level": "advanced" },
-      { "name": "SQL", "icon": "SiMysql", "level": "advanced" },
+      { "name": "SQL", "icon": "SiMysql", "level": "intermediate" },
       { "name": "HTML5", "icon": "SiHtml5", "level": "advanced" },
       { "name": "CSS3", "icon": "SiCss3", "level": "advanced" }
     ]

@@ -4,9 +4,8 @@
     "title": "Full-Stack Development Training",
     "issuer": "SDHUB",
     "date": "Sep 2025 – Dec 2025",
-    "credentialId": "",
+    "credentialId": "SDHUBMP-WD-2025-04-001",
     "verifyUrl": "",
-    "logo": "",
     "order": 1
   },
   {
@@ -16,7 +15,6 @@
     "date": "Dec 2024",
     "credentialId": "",
     "verifyUrl": "https://coursera.org/share/598ee38f9bhda5f023342920f69d0ea726",
-    "logo": "",
     "order": 2
   },
   {
@@ -26,7 +24,6 @@
     "date": "Dec 2024",
     "credentialId": "",
     "verifyUrl": "https://coursera.org/share/d6ba356d0137365e8999b4f03e43c0ba",
-    "logo": "",
     "order": 3
   }
 ]
