@@ -15,7 +15,7 @@ export default function CertificationsSection() {
 
       <div className="section-container relative z-10">
         <SectionHeading
-          number="08"
+          number="07"
           title="Verified Certifications"
           subtitle="Accredited industry credentials, technical training certificates, and verified software engineering specializations."
         />

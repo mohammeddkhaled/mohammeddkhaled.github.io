@@ -113,7 +113,7 @@ export default function JourneySection() {
   }, [isHovered]);
 
   return (
-    <section id="journey" className="h-[100vh] min-h-[600px] max-h-[1200px] py-12 md:py-24 bg-midnight-950 relative overflow-hidden flex items-center">
+    <section id="journey" className="h-[100vh] min-h-[600px] max-h-[1200px]  bg-midnight-950 relative overflow-hidden flex items-center">
       
       {/* Subtle Background Ambient Glows */}
       <div className="absolute top-1/4 left-0 w-[500px] h-[500px] bg-gold-500/5 rounded-full blur-[160px] pointer-events-none" />
@@ -124,7 +124,7 @@ export default function JourneySection() {
         {/* Left Sidebar - Fixed vertically centered */}
         <div className="lg:w-1/3 flex flex-col justify-center shrink-0 pt-8 lg:pt-0">
            <SectionHeading 
-             number="03" 
+             number="04" 
              title="The Evolution" 
              subtitle="A chronological journey of experience. The timeline scrolls automatically—hover over it to pause, or scroll manually."
            />

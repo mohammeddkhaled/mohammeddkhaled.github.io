@@ -136,7 +136,7 @@ export default function SkillsSection() {
 
       <div className="section-container relative z-10">
         <SectionHeading
-          number="04"
+          number="05"
           title="Technical Arsenal"
           subtitle="A curated showcase of my technical proficiencies, tools, and methodologies. Swipe or scroll to explore."
         />

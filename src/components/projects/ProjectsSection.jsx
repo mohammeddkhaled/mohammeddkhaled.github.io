@@ -15,13 +15,13 @@ export default function ProjectsSection() {
     .sort((a, b) => (a.order || 99) - (b.order || 99));
 
   return (
-    <section id="projects" className="py-section relative overflow-hidden bg-midnight-950">
+    <section id="projects" className="relative overflow-hidden bg-midnight-950 mb-12">
       {/* Ambient Lighting */}
       <div className="absolute top-1/4 right-10 w-96 h-96 bg-gold-500/5 rounded-full blur-[140px] pointer-events-none" />
 
       <div className="section-container relative z-10 mx-auto px-6 lg:px-12 ">
         <SectionHeading
-          number="05"
+          number="06"
           title="Featured Works"
           subtitle="A curated selection of my finest architectural and engineering efforts."
         />

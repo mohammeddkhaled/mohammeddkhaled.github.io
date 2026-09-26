@@ -1,6 +1,7 @@
 import React, { useRef, useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { FolderGit2, FileText, ArrowRight, MapPin, Mail } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 import ParticleField from './ParticleField.jsx';
 import profileData from '@/data/profile.json';
 import socialData from '@/data/social.json';
@@ -14,6 +15,7 @@ export default function HeroSection() {
   const heroContentRef = useRef(null);
   const watermarkRef = useRef(null);
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
+  const navigate = useNavigate();
 
   // Subtle Mouse Parallax Handler
   const handleMouseMove = (e) => {
@@ -178,7 +180,10 @@ export default function HeroSection() {
             <Button
               variant="primary"
               size="md"
-              onClick={() => scrollToSection('projects')}
+              onClick={() => {
+                navigate('/projects');
+                window.scrollTo(0, 0);
+              }}
               icon={FolderGit2}
               className="shadow-gold px-7 py-3"
             >

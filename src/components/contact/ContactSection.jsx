@@ -58,7 +58,7 @@ export default function ContactSection() {
 
       <div className="section-container relative z-10">
         <SectionHeading
-          number="09"
+          number="08"
           title="Initiate Conversation"
           subtitle="Let's build high-performance full stack systems, enterprise web applications, or discuss technical leadership."
         />

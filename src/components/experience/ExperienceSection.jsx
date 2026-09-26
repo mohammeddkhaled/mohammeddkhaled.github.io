@@ -29,7 +29,7 @@ export default function ExperienceSection() {
 
       <div className="section-container relative z-10">
         <SectionHeading
-          number="06"
+          number="03"
           title="Professional Experience"
           subtitle="Interactive rotating semicircle timeline showcasing technical leadership, team management, and backend development roles."
         />
