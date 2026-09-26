@@ -7,7 +7,7 @@ import socialData from '@/data/social.json';
 import { NAV_ITEMS } from '@/constants/index.js';
 import { scrollToSection, getCurrentYear } from '@/utils/helpers.js';
 import * as SiIcons from 'react-icons/si';
-import { FaLinkedin } from 'react-icons/fa';
+import { FaGithub, FaInstagram, FaLinkedin, FaWhatsapp } from 'react-icons/fa';
 export default function FooterSection() {
   const currentYear = getCurrentYear();
   const navigate = useNavigate();
@@ -83,6 +83,9 @@ export default function FooterSection() {
                 let IconComponent = SiIcons[s.icon];
                 if (s.id === 'email') IconComponent = Mail;
                 if (s.id === 'linkedin') IconComponent = FaLinkedin;
+                if (s.id === 'instagram') IconComponent = FaInstagram;
+                if (s.id === 'github') IconComponent = FaGithub;
+                if (s.id === 'whatsapp') IconComponent = FaWhatsapp;
                 if (!IconComponent) IconComponent = FileText;
                 
                 return (
