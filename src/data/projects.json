@@ -7,7 +7,7 @@
       "shortDescription": "End-to-end internal ERP system with complete technical lifecycle ownership — from architecture to deployment.",
       "fullDescription": "Leading the end-to-end development of an internal ERP system, owning the complete technical lifecycle from requirement analysis to implementation. Designed the overall system architecture, backend structure (MVC), and core business logic.",
       "technologies": [
-      "Node.js",
+        "Node.js",
         "Express.js",
         "MySQL",
         "Sequelize ORM",
@@ -185,7 +185,7 @@
   ],
   "personalProjects": [
     {
-      "id": "personal-portfolio-v2",
+      "id": "personal-portfolio",
       "title": "Interactive Developer Portfolio",
       "company": "Personal Project",
       "shortDescription": "A cinematic, highly interactive personal portfolio built with React, Tailwind CSS, and advanced animation libraries.",
@@ -228,6 +228,89 @@
       "status": "completed",
       "isFeatured": true,
       "order": 1
+    },
+    {
+      "id": "web-scraping-automation",
+      "title": "Automated University Result Web Scraper",
+      "company": "Personal Project",
+      "shortDescription": "Automated web scraping and data extraction pipeline built with Python and Selenium to batch query and parse academic results into structured CSV.",
+      "fullDescription": "An automated academic data extraction pipeline developed with Python and Selenium WebDriver. It automates browser interactions across university examination portals to query student hall tickets in batch, traverses dynamic DOM tables, extracts semester-wise grades and SGPA records, and outputs cleaned, structured datasets directly to CSV for analysis.",
+      "technologies": [
+        "Python",
+        "Selenium",
+        "Chrome WebDriver",
+        "Jupyter Notebook",
+        "Data Extraction",
+        "Web Scraping",
+        "CSV Parsing",
+        "Automation"
+      ],
+      "screenshots": [],
+      "liveUrl": "",
+      "githubUrl": "https://github.com/mohammeddkhaled",
+      "features": [
+        "Automated batch querying of student examination results using Selenium Chrome WebDriver",
+        "Dynamic table parsing to extract semester numbers, SGPA, and academic promotion statuses",
+        "Robust error handling and try-catch blocks ensuring uninterrupted pipeline execution on invalid records",
+        "Exported consolidated academic data into clean, structured CSV datasets",
+        "Detailed console telemetry logging query status and student identifiers in real-time"
+      ],
+      "challenges": [
+        "Handling dynamic DOM updates and latency variations on university result portals.",
+        "Parsing inconsistent semester result formats and missing records gracefully without breaking execution flow.",
+        "Managing WebDriver sessions and browser instances efficiently during high-volume batch queries."
+      ],
+      "responsibilities": [
+        "Engineered the complete web scraping pipeline using Python and Selenium WebDriver.",
+        "Designed DOM extraction logic for dynamic result tables and student metadata.",
+        "Implemented fault-tolerant batch processing and structured CSV serialization."
+      ],
+      "timeline": "Jan 2025",
+      "status": "completed",
+      "isFeatured": true,
+      "order": 2
+    },
+    {
+      "id": "jarvis-desktop-voice-assistant",
+      "title": "Jarvis — AI Desktop Voice Assistant",
+      "company": "Personal Project",
+      "shortDescription": "A hands-free desktop voice assistant built in Python that handles voice search, complex mathematical computations, note-taking, and system automation.",
+      "fullDescription": "An intelligent, hands-free desktop voice assistant developed in Python to automate daily computing workflows via natural voice commands. Powered by speech recognition and pyttsx3 offline text-to-speech, Jarvis enables voice-guided Wikipedia lookups, web search automation, algebraic math evaluations via SymPy, dictation note-taking, and local application launching.",
+      "technologies": [
+        "Python",
+        "pyttsx3",
+        "SpeechRecognition",
+        "SymPy",
+        "Wikipedia API",
+        "Web Automation",
+        "OS Automation"
+      ],
+      "screenshots": [],
+      "liveUrl": "",
+      "githubUrl": "https://github.com/mohammeddkhaled",
+      "features": [
+        "Real-time speech-to-text recognition with ambient noise filtering via Google Speech Recognition",
+        "Offline text-to-speech audio feedback using SAPI5 voice synthesis",
+        "Natural language mathematical query parsing and evaluation powered by SymPy",
+        "Automated Wikipedia voice search with concise audio summarization",
+        "Hands-free web navigation and automated Google & YouTube search dispatching",
+        "Voice-driven quick note-taking with automatic timestamped file generation",
+        "OS-level application automation to launch local desktop utilities like Notepad"
+      ],
+      "challenges": [
+        "Calibrating microphone pause thresholds and ambient noise adjustment for reliable speech capture.",
+        "Parsing colloquial spoken arithmetic phrases into valid symbolic mathematical expressions.",
+        "Handling Wikipedia disambiguation and connection exceptions gracefully without halting the voice listener."
+      ],
+      "responsibilities": [
+        "Designed and implemented the core event-driven voice recognition loop in Python.",
+        "Integrated speech recognition, audio synthesis, and modular command handlers.",
+        "Developed custom regex parsers to translate verbal math queries for the SymPy engine."
+      ],
+      "timeline": "jun 2024",
+      "status": "completed",
+      "isFeatured": true,
+      "order": 3
     }
   ]
 }
