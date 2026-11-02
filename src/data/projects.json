@@ -28,10 +28,10 @@
         "csv-parser"
       ],
       "screenshots": [
-        "public/bimq-1.png",
-        "public/bimq-2.png",
-        "public/bimq-3.png",
-        "public/bimq-4.png"
+        "/bimq-1.png",
+        "/bimq-2.png",
+        "/bimq-3.png",
+        "/bimq-4.png"
       ],
       "liveUrl": "https://bimqubator.com",
       "githubUrl": "https://github.com/Luminate-Web-Solutions/bimqubator_new_erp",
@@ -89,9 +89,9 @@
         "csv-parser"
       ],
       "screenshots": [
-        "public/sdhubq-1.png",
-        "public/sdhubq-2.png",
-        "public/sdhubq-3.png"
+        "/sdhubq-1.png",
+        "/sdhubq-2.png",
+        "/sdhubq-3.png"
       ],
       "liveUrl": "https://sdhubqutubshahi.com",
       "githubUrl": "https://github.com/Luminate-Web-Solutions/SDHUB_React_ERP",
@@ -147,11 +147,11 @@
         "GitHub"
       ],
       "screenshots": [
-        "public/sporeda-1.png",
-        "public/sporeda-2.png",
-        "public/sporeda-3.png",
-        "public/sporeda-4.png",
-        "public/sporeda-5.png"
+        "/sporeda-1.png",
+        "/sporeda-2.png",
+        "/sporeda-3.png",
+        "/sporeda-4.png",
+        "/sporeda-5.png"
       ],
       "liveUrl": "https://sporeda.com/",
       "githubUrl": "https://github.com/Luminate-Web-Solutions/sporeda",
@@ -200,10 +200,10 @@
         "React Router DOM"
       ],
       "screenshots": [
-        "public/portfolio-1.png",
-        "public/portfolio-2.png",
-        "public/portfolio-3.png",
-        "public/portfolio-4.png"
+        "/portfolio-1.png",
+        "/portfolio-2.png",
+        "/portfolio-3.png",
+        "/portfolio-4.png"
       ],
       "liveUrl": "https://mohammeddkhaled.github.io/",
       "githubUrl": "https://github.com/mohammeddkhaled/mohammeddkhaled.github.io",
