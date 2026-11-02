@@ -1,12 +1,21 @@
 [
   {
+    "id": "luminate-experience-certificate",
+    "title": "Junior Full Stack Developer & Team Lead — 1 Year Experience",
+    "issuer": "Luminate Web Solutions",
+    "date": "Nov 2025 – Oct 2026",
+    "credentialId": "LWS-EXP-2026",
+    "verifyUrl": "",
+    "order": 1
+  },
+  {
     "id": "fullstack-training",
     "title": "Full-Stack Development Training",
     "issuer": "SDHUB",
     "date": "Sep 2025 – Dec 2025",
     "credentialId": "SDHUBMP-WD-2025-04-001",
     "verifyUrl": "",
-    "order": 1
+    "order": 2
   },
   {
     "id": "google-data-foundations",
@@ -15,7 +24,7 @@
     "date": "Dec 2024",
     "credentialId": "",
     "verifyUrl": "https://coursera.org/share/598ee38f9bhda5f023342920f69d0ea726",
-    "order": 2
+    "order": 3
   },
   {
     "id": "google-data-decisions",
@@ -24,6 +33,6 @@
     "date": "Dec 2024",
     "credentialId": "",
     "verifyUrl": "https://coursera.org/share/d6ba356d0137365e8999b4f03e43c0ba",
-    "order": 3
+    "order": 4
   }
 ]
