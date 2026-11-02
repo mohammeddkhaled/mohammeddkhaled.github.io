@@ -25,7 +25,7 @@ export default function CertificationsSection() {
           whileInView="visible"
           viewport={{ once: true, margin: '-50px' }}
           variants={staggerContainer}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-12"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12"
         >
           {certsData.map((cert, idx) => (
             <motion.div key={cert.id} variants={fadeInUp}>
